@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0404">
+  <meta name="description" content="Soezy protects Discord communities with server security and automation.">
+  <title>Soezy | Discord Security</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/home.css?v=20261017b">
+</head>
+<body class="home-page">
+  <header class="home-nav" data-nav>
+    <div class="nav-inner">
+      <a class="home-brand" href="/" aria-label="Soezy home">
+        <span class="brand-avatar" data-bot-avatar-wrap>
+          <span class="brand-glow" aria-hidden="true"></span>
+          <span class="brand-disc"><img data-bot-avatar alt="" hidden><b data-bot-fallback>S</b></span>
+        </span>
+        <strong class="brand-name" data-bot-name>Soezy</strong>
+      </a>
+
+      <nav class="home-nav-links" aria-label="Main navigation">
+        <a class="active" href="/">Home</a>
+        <a href="/dashboard">Dashboard</a>
+        <div class="menu" data-dropdown>
+          <button class="menu-trigger" type="button" data-menu-toggle aria-expanded="false" aria-haspopup="true">
+            Extra
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="menu-panel" data-menu-panel>
+            <a href="/status-page"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>Status</a>
+            <a href="#live-stats"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>About</a>
+            <a href="/docs"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></svg>Documentation</a>
+          </div>
+        </div>
+        <a href="/docs">Support</a>
+        <a class="premium-pill" href="/premium">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12l4 6-10 12L2 9z"/><path d="M2 9h20M12 21 8 9l4-6 4 6z"/></svg>
+          Premium
+        </a>
+      </nav>
+
+      <div class="home-nav-actions">
+        <div class="menu lang-menu" data-dropdown>
+          <button class="chip" type="button" data-menu-toggle aria-expanded="false" aria-label="Language">
+            <span data-current-flag>🇬🇧</span><b data-current-language>EN</b>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="menu-panel right" data-menu-panel>
+            <button type="button" data-lang-option="EN" data-flag="🇬🇧"><span>🇬🇧</span>English</button>
+            <button type="button" data-lang-option="HI" data-flag="🇮🇳"><span>🇮🇳</span>Hindi</button>
+            <button type="button" data-lang-option="DE" data-flag="🇩🇪"><span>🇩🇪</span>Deutsch</button>
+            <button type="button" data-lang-option="ES" data-flag="🇪🇸"><span>🇪🇸</span>Español</button>
+            <button type="button" data-lang-option="FR" data-flag="🇫🇷"><span>🇫🇷</span>Français</button>
+            <button type="button" data-lang-option="PT" data-flag="🇧🇷"><span>🇧🇷</span>Português</button>
+            <button type="button" data-lang-option="IT" data-flag="🇮🇹"><span>🇮🇹</span>Italiano</button>
+          </div>
+        </div>
+        <a class="nav-action" data-account-link href="/login">Log in</a>
+        <button class="mobile-menu-button" data-menu-toggle-mobile type="button" aria-label="Open navigation" aria-controls="mobile-main-nav" aria-expanded="false">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <nav class="mobile-nav" id="mobile-main-nav" data-mobile-menu hidden aria-label="Mobile navigation">
+      <a class="active" href="/">Home</a>
+      <a href="/dashboard">Dashboard</a>
+      <a href="/status-page">Status</a>
+      <a href="/docs">Documentation</a>
+      <a href="/premium">Premium</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero-section" aria-labelledby="hero-title">
+      <div class="hero-bg" aria-hidden="true">
+        <span class="hero-grid"></span>
+        <span class="blob blob-a"></span>
+        <span class="blob blob-b"></span>
+        <span class="hero-spotlight" data-spotlight></span>
+        <span class="hero-fade"></span>
+      </div>
+      <div class="hero-bot-visual" aria-hidden="true">
+        <span class="hero-orbit orbit-one"></span>
+        <span class="hero-orbit orbit-two"></span>
+        <span class="hero-orbit orbit-three"></span>
+        <span class="hero-bot-image"><img data-hero-bot-avatar alt="" hidden><b data-hero-bot-fallback>S</b></span>
+      </div>
+
+      <div class="hero-content shell">
+        <p class="eyebrow rise" style="--d:0ms"><span class="pulse-dot" data-status-dot></span><span data-status-label>Checking live status</span></p>
+        <h1 id="hero-title">
+          <span class="rise line" style="--d:80ms">Security for your server.</span>
+          <span class="rise line shimmer-text" style="--d:220ms">Built with precision.</span>
+        </h1>
+        <p class="hero-description rise" style="--d:380ms"><span data-bot-name>Soezy</span> keeps your Discord community safer with Anti-Nuke, AutoMod, verification, and moderation tools managed from one place.</p>
+        <div class="hero-actions rise" style="--d:520ms">
+          <a class="button button-primary" href="/invite"><span class="btn-sheen" aria-hidden="true"></span>Add to Discord <span aria-hidden="true">&#8594;</span></a>
+          <a class="button button-secondary" data-dashboard-link href="/dashboard">Open dashboard</a>
+        </div>
+        <div class="hero-stats rise" style="--d:680ms" aria-label="Bot statistics">
+          <div><strong data-stat="servers">--</strong><span>Active servers</span></div>
+          <div><strong data-stat="users">--</strong><span>Protected users</span></div>
+          <div><strong data-stat="commands">--</strong><span>Commands</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="live-section" id="live-stats" aria-labelledby="live-title">
+      <div class="shell">
+        <div class="section-heading" data-reveal>
+          <div><p class="eyebrow">System overview</p><h2 id="live-title">Live statistics</h2><p>Current service information from Soezy.</p></div>
+          <span class="status-pill" data-status-pill><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg><span data-status-pill-label>Checking</span></span>
+        </div>
+        <div class="live-grid">
+          <article class="metric-card" data-reveal style="--c:#ef4444;--i:0">
+            <span class="metric-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+            <strong data-stat="users">--</strong><span class="metric-label">Global users</span>
+          </article>
+          <article class="metric-card is-highlight" data-reveal style="--c:#ef4444;--i:1">
+            <span class="metric-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="3" width="20" height="8" rx="2"/><rect x="2" y="13" width="20" height="8" rx="2"/><path d="M6 7h.01M6 17h.01"/></svg></span>
+            <strong data-stat="servers">--</strong><span class="metric-label">Active servers</span>
+          </article>
+          <article class="metric-card" data-reveal style="--c:#f59e0b;--i:2">
+            <span class="metric-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m4 17 6-6-6-6M12 19h8"/></svg></span>
+            <strong data-stat="commands">--</strong><span class="metric-label">Available commands</span>
+          </article>
+          <article class="metric-card" data-reveal style="--c:#fb923c;--i:3">
+            <span class="metric-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.55a11 11 0 0 1 14.08 0M1.42 9a16 16 0 0 1 21.16 0M8.53 16.11a6 6 0 0 1 6.95 0M12 20h.01"/></svg></span>
+            <strong data-stat="latency">--</strong><span class="metric-label">API latency</span>
+          </article>
+          <article class="metric-card" data-reveal style="--c:#2dd4bf;--i:4">
+            <span class="metric-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span>
+            <strong data-stat="uptime">--</strong><span class="metric-label">System uptime</span>
+          </article>
+          <article class="metric-card" data-reveal style="--c:#38bdf8;--i:5">
+            <span class="metric-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h16M4 15h16M10 3 8 21M16 3l-2 18"/></svg></span>
+            <strong data-stat="shards">--</strong><span class="metric-label">Total shards</span>
+          </article>
+          <article class="metric-card" data-reveal style="--c:#4ade80;--i:6">
+            <span class="metric-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 10 5-10 5L2 7z"/><path d="m2 17 10 5 10-5M2 12l10 5 10-5"/></svg></span>
+            <strong data-stat="clusters">--</strong><span class="metric-label">Total clusters</span>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="/assets/home.js?v=20261017b" defer></script>
+</body>
+</html>

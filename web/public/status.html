@@ -1,0 +1,44 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#05060d">
+  <title>Status | Soezy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/styles.css?v=20261015c">
+</head>
+<body class="status-page">
+  <canvas id="particles" aria-hidden="true"></canvas>
+  <header class="site-nav">
+    <a class="brand" href="/"><span class="brand-mark" data-bot-avatar>S</span><span><strong data-bot-name>Soezy</strong><small>Status</small></span></a>
+    <button class="icon-button mobile-only" data-nav-toggle aria-label="Open navigation">Menu</button>
+    <nav class="nav-links" data-nav><a href="/">Home</a><a href="/dashboard">Dashboard</a><a href="/premium">Premium</a><a href="/docs">Support</a><a class="active" href="/status-page">Status</a></nav>
+    <div class="nav-actions" data-nav-actions><a class="button primary" href="/login">Login</a></div>
+  </header>
+  <main class="shell page-pad">
+    <section class="section-head reveal">
+      <span>Live Status</span>
+      <h1>Runtime health center.</h1>
+      <p>API, websocket, shard, cluster, memory, CPU, and uptime status refresh from the same internal bot runtime used by the dashboard.</p>
+    </section>
+    <section class="status-grid">
+      <article class="status-card"><small>API Health</small><b data-status="online">--</b><span class="dot green"></span></article>
+      <article class="status-card"><small>Ping</small><b><span data-status="latency">--</span>ms</b></article>
+      <article class="status-card"><small>Uptime</small><b data-status="uptime">--</b></article>
+      <article class="status-card"><small>Servers</small><b data-stat="servers">--</b></article>
+      <article class="status-card"><small>Users</small><b data-stat="users">--</b></article>
+      <article class="status-card"><small>Commands</small><b data-stat="commands">--</b></article>
+      <article class="status-card"><small>Shards</small><b data-stat="shards">--</b></article>
+      <article class="status-card"><small>Clusters</small><b data-stat="clusters">--</b></article>
+      <article class="status-card"><small>Lavalink</small><b>Ready</b></article>
+    </section>
+  </main>
+  <script src="/assets/colors.js?v=20260529a"></script>
+  <script src="/assets/config.js?v=20260529a"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/assets/app.js?v=20261015c"></script>
+</body>
+</html>

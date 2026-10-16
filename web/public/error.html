@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#05060d">
+  <title>Soezy | Request Status</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/styles.css?v=20261015c">
+</head>
+<body class="error-page">
+  <canvas id="particles" aria-hidden="true"></canvas>
+  <header class="site-nav">
+    <a class="brand" href="/"><span class="brand-mark" data-bot-avatar>S</span><span><strong data-bot-name>Soezy</strong><small>Secure Web</small></span></a>
+    <nav class="nav-links" data-nav><a href="/">Home</a><a href="/dashboard">Dashboard</a><a href="/premium">Premium</a><a href="/docs">Support</a><a href="/status-page">Status</a></nav>
+    <div class="nav-actions" data-nav-actions><a class="button primary" href="/login">Login</a></div>
+  </header>
+  <main class="error-shell shell">
+    <section class="error-card reveal">
+      <span class="kicker">Soezy Guard</span>
+      <h1 data-error-code>404</h1>
+      <h2 data-error-title>Page not found</h2>
+      <p data-error-copy>The route you opened is not available, or the session needs a fresh Discord login.</p>
+      <div class="hero-actions">
+        <a class="button primary big" href="/dashboard">Open Dashboard</a>
+        <a class="button ghost big" href="/">Back Home</a>
+        <a class="button subtle big" href="/status-page">Live Status</a>
+      </div>
+    </section>
+  </main>
+  <script src="/assets/colors.js?v=20260529a"></script>
+  <script src="/assets/config.js?v=20260529a"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/assets/app.js?v=20261015c"></script>
+  <script>
+    (function () {
+      var code = (location.pathname.match(/\/(401|403|404|429|500)$/) || [])[1] || "404";
+      var copy = {
+        "401": ["Login required", "Your dashboard session has expired. Log in with Discord to continue."],
+        "403": ["Access denied", "This Discord account does not have owner, administrator, or manage server access for that guild."],
+        "404": ["Page not found", "The route you opened is not available on Soezy Web."],
+        "429": ["Rate limited", "Too many requests arrived at once. Wait a moment and try again."],
+        "500": ["Runtime issue", "The web runtime could not finish that request. The status page will show internal system health."]
+      };
+      document.querySelector("[data-error-code]").textContent = code;
+      document.querySelector("[data-error-title]").textContent = copy[code][0];
+      document.querySelector("[data-error-copy]").textContent = copy[code][1];
+      document.title = code + " | Soezy";
+    })();
+  </script>
+</body>
+</html>

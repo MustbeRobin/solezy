@@ -1,0 +1,43 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#05060d">
+  <title>Support | Soezy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/styles.css?v=20261015c">
+</head>
+<body class="docs-page">
+  <canvas id="particles" aria-hidden="true"></canvas>
+  <header class="site-nav">
+    <a class="brand" href="/"><span class="brand-mark" data-bot-avatar>S</span><span><strong data-bot-name>Soezy</strong><small>Support</small></span></a>
+    <button class="icon-button mobile-only" data-nav-toggle aria-label="Open navigation">Menu</button>
+    <nav class="nav-links" data-nav><a href="/">Home</a><a href="/dashboard">Dashboard</a><a href="/premium">Premium</a><a class="active" href="/docs">Support</a><a href="/status-page">Status</a></nav>
+    <div class="nav-actions" data-nav-actions><a class="button primary" href="/login">Login</a></div>
+  </header>
+  <main class="shell page-pad docs-layout">
+    <aside class="docs-side">
+      <a href="#setup">Setup</a>
+      <a href="#antinuke">Antinuke</a>
+      <a href="#automod">Automod</a>
+      <a href="#logging">Logging</a>
+      <a href="#music">Music</a>
+      <a href="#sync">Realtime Sync</a>
+    </aside>
+    <section class="docs-content">
+      <article id="setup"><span>01</span><h1>Setup</h1><p>Invite Soezy with the required permissions, login through Discord OAuth, choose a server from the dashboard, then enable the modules you want to run.</p><code>npm install && npm start</code></article>
+      <article id="antinuke"><span>02</span><h2>Antinuke</h2><p>Enable anti-nuke, select event protections, choose punishments, and tune thresholds for bans, kicks, channel deletes, and role deletes.</p></article>
+      <article id="automod"><span>03</span><h2>Automod</h2><p>Control anti-spam, anti-link, mention protection, caps filtering, emoji spam limits, and anti-invite handling from one panel.</p></article>
+      <article id="logging"><span>04</span><h2>Logging</h2><p>Route message, moderation, member, invite, voice, admin, role, and channel events to clean logging destinations.</p></article>
+      <article id="music"><span>05</span><h2>Music</h2><p>Use the music surface to inspect node state, queue, playback, default volume, and premium player controls.</p></article>
+      <article id="sync"><span>06</span><h2>Realtime Sync</h2><p>The dashboard uses Socket.IO. Updates are debounced on the client, written through the bot database helper, then broadcast to every open dashboard tab.</p></article>
+    </section>
+  </main>
+  <script src="/assets/colors.js?v=20260529a"></script>
+  <script src="/assets/config.js?v=20260529a"></script>
+  <script src="/assets/app.js?v=20261015c"></script>
+</body>
+</html>

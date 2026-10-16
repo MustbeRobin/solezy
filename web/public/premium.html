@@ -1,0 +1,52 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#05060d">
+  <title>Premium | Soezy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/styles.css?v=20261015c">
+</head>
+<body class="premium-page">
+  <canvas id="particles" aria-hidden="true"></canvas>
+  <header class="site-nav">
+    <a class="brand" href="/"><span class="brand-mark" data-bot-avatar>S</span><span><strong data-bot-name>Soezy</strong><small>Premium</small></span></a>
+    <button class="icon-button mobile-only" data-nav-toggle aria-label="Open navigation">Menu</button>
+    <nav class="nav-links" data-nav><a href="/">Home</a><a href="/dashboard">Dashboard</a><a class="active" href="/premium">Premium</a><a href="/docs">Support</a><a href="/status-page">Status</a></nav>
+    <div class="nav-actions" data-nav-actions><a class="button primary" href="/login">Login</a></div>
+  </header>
+
+  <main class="shell page-pad">
+    <section class="section-head center reveal">
+      <span>Premium</span>
+      <h1>Upgrade the security layer.</h1>
+      <p>Sharper automation, premium customization, faster support, and stronger staff workflows for communities that cannot afford messy moderation.</p>
+      <div class="billing-toggle" data-billing-toggle>
+        <button class="active" type="button" data-billing="monthly">Monthly</button>
+        <button type="button" data-billing="yearly">Yearly</button>
+      </div>
+    </section>
+
+    <section class="pricing-grid">
+      <article class="price-card reveal" id="starter" data-month="$3" data-year="$30"><span>Starter</span><h2>Core Server</h2><strong><i data-price>$3</i><small data-period>/mo</small></strong><p>For smaller communities that want clean moderation and welcome systems.</p><ul><li>Premium command styling</li><li>Basic security modules</li><li>Ticket and welcome tools</li><li>Dashboard access</li></ul><a class="button ghost" href="/docs#setup">See Setup</a></article>
+      <article class="price-card featured reveal" id="premium-guard" data-month="$7" data-year="$70"><span>Popular</span><h2>Premium Guard</h2><strong><i data-price>$7</i><small data-period>/mo</small></strong><p>The best fit for growing servers with active staff and security needs.</p><ul><li>Advanced antinuke controls</li><li>Full dashboard modules</li><li>Automod presets</li><li>Priority support</li><li>Premium themes</li></ul><a class="button primary" href="/invite">Add Soezy</a></article>
+      <article class="price-card reveal" id="elite" data-month="$14" data-year="$140"><span>Elite</span><h2>Security Suite</h2><strong><i data-price>$14</i><small data-period>/mo</small></strong><p>For serious communities that need deeper hardening and direct setup help.</p><ul><li>Custom server hardening</li><li>Elite logging templates</li><li>Music upgrades</li><li>Advanced logging</li><li>Direct setup assistance</li></ul><a class="button ghost" href="/docs#sync">Talk Setup</a></article>
+    </section>
+
+    <section class="section split">
+      <div class="reveal"><span class="kicker">Premium UX</span><h2>Unlock smoother staff workflows.</h2><p>Premium servers receive richer module styling, guided setup flows, command surfaces, and priority sync support.</p></div>
+      <div class="feature-grid">
+        <article class="feature-card reveal"><i>UI</i><h3>Premium Themes</h3><p>Polished module cards, glow accents, and branded surfaces.</p></article>
+        <article class="feature-card reveal"><i>SP</i><h3>Setup Priority</h3><p>Faster help for security, logs, tickets, and automod tuning.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <script src="/assets/colors.js?v=20260529a"></script>
+  <script src="/assets/config.js?v=20260529a"></script>
+  <script src="/assets/app.js?v=20261015c"></script>
+</body>
+</html>

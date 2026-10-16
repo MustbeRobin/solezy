@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#05070d">
+  <title>Dashboard | Soezy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/dashboard-ui.css?v=20261017b">
+</head>
+<body class="dashboard-page dashboard-booting">
+  <div class="ambient" aria-hidden="true"><span class="amb a"></span><span class="amb b"></span></div>
+
+  <div class="dashboard-loader" data-dashboard-loader role="status" aria-live="polite">
+    <div class="loader-avatar-wrap">
+      <div class="loader-orbit"></div>
+      <span class="loader-avatar" data-bot-avatar>S</span>
+    </div>
+    <strong>Loading Dashboard</strong>
+    <span data-loader-copy>Syncing your servers and premium status</span>
+    <small data-loader-percent>0%</small>
+  </div>
+
+  <div class="dash-shell is-hidden" data-dashboard-shell>
+    <aside class="rail-sidebar" data-sidebar>
+      <a class="rail-back" href="/" aria-label="Back to home" title="Back to home"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></a>
+      <div class="rail-logo brand-mark" data-bot-avatar>S</div>
+      <div class="rail-divider"></div>
+      <div class="server-rail scrollbar-none" data-server-rail></div>
+      <button class="rail-avatar" data-sidebar-avatar type="button" title="Profile">S</button>
+    </aside>
+
+    <aside class="module-sidebar">
+      <div class="guild-identity">
+        <i data-sidebar-guild-icon>S</i>
+        <span>
+          <b data-sidebar-guild-name>Soezy</b>
+          <small data-sidebar-guild-meta>Server settings</small>
+        </span>
+      </div>
+      <div class="sidebar-actions">
+        <button class="button primary small" data-refresh-guilds type="button">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a9 9 0 0 0-15.5-6.2L3 8M3 3v5h5M3 12a9 9 0 0 0 15.5 6.2L21 16M21 21v-5h-5"/></svg>Refresh Server
+        </button>
+        <button class="button ghost small" data-command-search type="button">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m16 16 4 4"/></svg>Command Search
+        </button>
+      </div>
+
+      <p class="nav-caption">MODULES</p>
+      <nav class="panel-tabs scrollbar-none" data-panel-nav aria-label="Dashboard sections">
+        <div class="module-group">
+          <span class="module-group-title">Core</span>
+          <button class="active" data-panel="overview" type="button"><span class="nav-ico"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/></svg></span>Overview<small></small></button>
+          <button data-panel="settings" type="button"><span class="nav-ico"><svg viewBox="0 0 24 24"><path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6"/></svg></span>Settings<small></small></button>
+          <button data-panel="profile" type="button"><span class="nav-ico"><svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>Profile<small></small></button>
+        </div>
+        <div class="module-group">
+          <span class="module-group-title">Security</span>
+          <button data-panel="antinuke" type="button"><span class="nav-ico"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M12 8v4M12 16h.01"/></svg></span>Antinuke<small></small></button>
+          <button data-panel="automod" type="button"><span class="nav-ico"><svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></span>Automod<small></small></button>
+          <button data-panel="whitelist" type="button"><span class="nav-ico"><svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="m16 11 2 2 4-4"/></svg></span>Whitelist<small></small></button>
+          <button data-panel="security" type="button"><span class="nav-ico"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></span>Security<small></small></button>
+        </div>
+        <div class="module-group">
+          <span class="module-group-title">Modules</span>
+          <button data-panel="welcome" type="button"><span class="nav-ico"><svg viewBox="0 0 24 24"><path d="m12 3 1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/><path d="M19 3v4M21 5h-4"/></svg></span>Welcome<small></small></button>
+          <button data-panel="tickets" type="button"><span class="nav-ico"><svg viewBox="0 0 24 24"><path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2z"/><path d="M13 5v2M13 17v2M13 11v2"/></svg></span>Tickets<small></small></button>
+          <button data-panel="music" type="button"><span class="nav-ico"><svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></span>Music<small></small></button>
+          <button data-panel="customRoles" type="button"><span class="nav-ico"><svg viewBox="0 0 24 24"><circle cx="9" cy="7" r="4"/><path d="M3 21v-2a4 4 0 0 1 4-4h4"/><circle cx="18" cy="18" r="2"/><path d="M18 14v2M18 20v2M22 18h-2M16 18h-2"/></svg></span>Custom Role<small></small></button>
+          <button data-panel="verification" type="button"><span class="nav-ico"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></span>Verify<small></small></button>
+        </div>
+        <div class="module-group">
+          <span class="module-group-title">Operations</span>
+          <button data-panel="logging" type="button"><span class="nav-ico"><svg viewBox="0 0 24 24"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2M9 12h6M9 16h4"/></svg></span>Logs<small></small></button>
+          <button data-panel="commands" type="button"><span class="nav-ico"><svg viewBox="0 0 24 24"><path d="m4 17 6-6-6-6M12 19h8"/></svg></span>Commands<small></small></button>
+          <button data-panel="analytics" type="button"><span class="nav-ico"><svg viewBox="0 0 24 24"><path d="M12 20V10M18 20V4M6 20v-4"/></svg></span>Analytics<small></small></button>
+          <button data-panel="status" type="button"><span class="nav-ico"><svg viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0 1 14.08 0M1.42 9a16 16 0 0 1 21.16 0M8.53 16.11a6 6 0 0 1 6.95 0M12 20h.01"/></svg></span>Status<small></small></button>
+          <button data-panel="premium" type="button"><span class="nav-ico"><svg viewBox="0 0 24 24"><path d="M6 3h12l4 6-10 12L2 9z"/><path d="M2 9h20"/></svg></span>Premium<small></small></button>
+        </div>
+      </nav>
+    </aside>
+
+    <main class="dash-main">
+      <header class="dash-top">
+        <button class="icon-button mobile-only" data-sidebar-toggle aria-label="Toggle sidebar"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+        <div class="dash-title">
+          <span class="kicker">Realtime Control</span>
+          <h1 data-dashboard-title>Dashboard</h1>
+        </div>
+        <div class="dash-status">
+          <span class="user-chip"><i data-topbar-avatar></i><b data-topbar-user>User</b></span>
+          <span class="sync-chip"><i class="dot green" data-sync-dot></i><b data-sync-state>Connecting</b></span>
+          <span class="api-chip">API <b data-latency>--</b>ms</span>
+          <button class="button ghost small" data-logout type="button">Logout</button>
+        </div>
+      </header>
+
+      <div class="save-bar" data-save-bar hidden>
+        <span data-save-copy>Saved</span>
+        <div>
+          <button class="button ghost small" data-discard-changes type="button">Reset</button>
+          <button class="button primary small" data-save-changes type="button">Save Changes</button>
+        </div>
+      </div>
+
+      <div class="dash-scroll">
+      <section class="dashboard-home" data-dashboard-home>
+        <div class="bridge-warning" data-system-warning hidden>
+          <b>System starting</b>
+          <span>Waiting for the internal bot runtime. Live counters will update automatically.</span>
+        </div>
+        <article class="user-summary hero-banner">
+          <span class="banner-glow" aria-hidden="true"></span>
+          <div class="home-user-avatar" data-user-avatar>U</div>
+          <div class="summary-copy">
+            <span class="kicker">Your servers</span>
+            <h2>Pick a server.</h2>
+            <p>Ready when you are, <b data-user-name>User</b>. Choose a server to configure Soezy.</p>
+            <div class="home-stat-line">
+              <span>Total <b data-user-total>0</b></span>
+              <span>Manageable <b data-user-manageable>0</b></span>
+              <span>Owned <b data-user-owned>0</b></span>
+              <span>With Bot <b data-user-with-bot>0</b></span>
+              <span>Live Users <b data-status="users">--</b></span>
+              <span>Commands <b data-status="commands">--</b></span>
+            </div>
+          </div>
+          <div class="home-actions">
+            <a class="button primary small" href="/premium">Get Premium</a>
+            <a class="button ghost small" href="/invite">Add to Discord</a>
+          </div>
+        </article>
+        <div class="home-section-head">
+          <div>
+            <h2>Your Servers</h2>
+            <p>Configure servers where Soezy is already installed, or invite it to the rest.</p>
+          </div>
+          <select data-guild-select aria-label="Select server"></select>
+        </div>
+        <div class="server-card-grid" data-server-grid></div>
+      </section>
+
+      <div data-config-workspace hidden>
+        <section class="server-hero hero-banner">
+          <span class="banner-glow" aria-hidden="true"></span>
+          <div class="server-avatar" data-server-avatar>S</div>
+          <div class="summary-copy">
+            <span class="kicker">Server Settings</span>
+            <h2 data-server-name>Select a server</h2>
+            <p data-server-meta>Choose a manageable Discord server to configure Soezy modules.</p>
+          </div>
+          <div class="score-pill"><span data-security-score>--</span><small>Security</small></div>
+        </section>
+
+        <section class="panel active" data-panel-view="overview">
+          <div class="panel-head">
+            <div>
+              <h2>Live Overview</h2>
+              <p>Server health, active modules, sync state, and risk level in one screen.</p>
+            </div>
+            <div class="panel-actions">
+              <button class="button ghost small" data-command-search type="button">Search Commands</button>
+              <a class="button primary small" href="/premium">Premium</a>
+            </div>
+          </div>
+          <div class="dash-grid six">
+            <article class="metric-card"><span>Members</span><b data-metric="members">--</b></article>
+            <article class="metric-card"><span>Channels</span><b data-metric="channels">--</b></article>
+            <article class="metric-card"><span>Roles</span><b data-metric="roles">--</b></article>
+            <article class="metric-card"><span>Commands</span><b data-metric="commands">--</b></article>
+            <article class="metric-card"><span>Security</span><b data-metric="securityScore">--</b></article>
+            <article class="metric-card"><span>Modules</span><b data-metric="modules">--</b></article>
+          </div>
+          <div class="module-card-grid" data-module-cards></div>
+          <div class="dash-grid two">
+            <article class="control-card">
+              <h3>Risk Analysis</h3>
+              <div class="risk-meter"><i data-risk-bar></i></div>
+              <p data-risk-copy>Waiting for server data.</p>
+            </article>
+            <article class="control-card">
+              <h3>Live Sync</h3>
+              <div class="sync-list">
+                <span><b>Socket.IO</b><small data-sync-state>Connecting</small></span>
+                <span><b>Database</b><small>Internal config</small></span>
+                <span><b>Bot Runtime</b><small data-runtime-label>Token fallback</small></span>
+              </div>
+            </article>
+          </div>
+          <div class="module-strip" data-module-strip></div>
+        </section>
+
+        <section class="panel" data-panel-view="settings">
+          <div class="panel-head"><div><h2>Bot Customization</h2><p>Server-level preferences and premium identity controls.</p></div><span class="server-badge">Standard</span></div>
+          <div class="dash-grid two">
+            <article class="control-card">
+              <h3>Server Prefix</h3>
+              <p>Prefix customization is shown here and can be wired to the bot config when the command exists.</p>
+              <input value="!" aria-label="Command prefix">
+            </article>
+            <article class="control-card">
+              <h3>Interface</h3>
+              <div class="setting-list">
+                <span class="setting-row"><b>Premium cards</b><small>Enabled</small></span>
+                <span class="setting-row"><b>Live sync</b><small data-sync-state>Connecting</small></span>
+                <span class="setting-row"><b>Theme</b><small>Crimson Night</small></span>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="panel" data-panel-view="antinuke">
+          <div class="panel-head"><div><h2>Antinuke</h2><p>Protection thresholds, event toggles, and punishment behavior.</p></div><span class="server-badge" data-antinuke-armed>0/0 armed</span></div>
+          <article class="control-card security-parent-control">
+            <label class="toggle-row"><span><b>Enable Anti-Nuke</b><small data-security-parent-state="antinuke">Inactive</small></span><input type="checkbox" data-bind="antinuke.systemEnabled"></label>
+            <label>Detection window (ms)<input type="number" min="1000" max="60000" step="1000" data-bind="antinuke.timeWindow"></label>
+          </article>
+          <div class="security-feature-groups" data-security-settings="antinuke"></div>
+        </section>
+
+        <section class="panel" data-panel-view="automod">
+          <div class="panel-head"><div><h2>AutoMod</h2><p>Protection thresholds and moderation actions.</p></div><span class="server-badge" data-automod-armed>0 active modules</span></div>
+          <article class="control-card security-parent-control">
+            <label class="toggle-row"><span><b>Enable AutoMod</b><small data-security-parent-state="automod">Inactive</small></span><input type="checkbox" data-bind="automod.systemEnabled"></label>
+          </article>
+          <div class="security-feature-groups" data-security-settings="automod"></div>
+        </section>
+
+        <section class="panel" data-panel-view="whitelist">
+          <div class="panel-head"><div><h2>Whitelist</h2><p>Trusted users and roles ignored by security modules.</p></div><span class="server-badge"><b data-whitelist-user-count>0</b> users / <b data-whitelist-role-count>0</b> roles</span></div>
+          <div class="dash-grid two">
+            <article class="control-card"><h3>Ignored Roles</h3><p>One role ID per line. Saved directly to the bot security whitelist.</p><textarea rows="8" data-list-bind="security.whitelistRoles" placeholder="Role IDs"></textarea></article>
+            <article class="control-card"><h3>Ignored Users</h3><p>One user ID per line. Saved directly to the bot security whitelist.</p><textarea rows="8" data-list-bind="security.whitelistUsers" placeholder="User IDs"></textarea></article>
+          </div>
+        </section>
+
+        <section class="panel" data-panel-view="logging">
+          <div class="panel-head"><div><h2>Event Logging</h2><p>Per-event channel assignments and automatic logging setup.</p></div><button class="button primary small" data-logging-setup type="button">Run Setup</button></div>
+          <div class="dash-grid two">
+            <article class="control-card"><label class="toggle-row"><span><b>Enable Logging</b><small data-logging-count>0/10 events enabled</small></span><input type="checkbox" data-bind="logging.enabled"></label><label>Main Log Channel<input data-bind="logging.channel" placeholder="Channel ID"></label></article>
+            <article class="control-card"><h3>Channel Routing</h3><label>Moderation<input data-bind="logging.channels.moderation" placeholder="Channel ID"></label><label>Messages<input data-bind="logging.channels.message" placeholder="Channel ID"></label><label>Voice<input data-bind="logging.channels.voice" placeholder="Channel ID"></label></article>
+          </div>
+          <div class="event-grid" data-event-group="logging"></div>
+        </section>
+
+        <section class="panel" data-panel-view="welcome">
+          <div class="panel-head"><div><h2>Welcomer</h2><p>Embeds, variables, preview, images, and auto-delete timers.</p></div><span class="server-badge">Live Preview</span></div>
+          <div class="dash-grid two">
+            <article class="control-card"><label class="toggle-row"><span><b>Enable Welcome</b><small>Send a join message</small></span><input type="checkbox" data-bind="welcome.enabled"></label><label>Channel ID<input data-bind="welcome.channel" placeholder="Channel ID"></label><label>Title<input data-bind="welcome.title" placeholder="Welcome to {server}"></label><label>Message<textarea data-bind="welcome.message" rows="5"></textarea></label><label>Background Image URL<input data-bind="welcome.image" placeholder="https://..."></label><label>Auto Delete Seconds<input type="number" min="0" data-bind="welcome.autoDelete"></label></article>
+            <article class="preview-card"><span>Discord Preview</span><h3 data-welcome-title>Welcome to Soezy</h3><p data-welcome-message>Welcome {user} to {server}!</p><small data-welcome-footer>Variables: {user}, {server}, {membercount}</small></article>
+          </div>
+        </section>
+
+        <section class="panel" data-panel-view="tickets">
+          <div class="panel-head"><div><h2>Tickets</h2><p>Support panels, staff routing, caps, and category workflow.</p></div><span class="server-badge">Support</span></div>
+          <div class="dash-grid two">
+            <article class="control-card"><label class="toggle-row"><span><b>Enable Tickets</b><small>Allow users to open support tickets</small></span><input type="checkbox" data-bind="ticket.enabled"></label><label>Panel Channel<input data-bind="ticket.channel" placeholder="Channel ID"></label><label>Category<input data-bind="ticket.category" placeholder="Category ID"></label></article>
+            <article class="control-card"><h3>Limits</h3><label>Support Role<input data-bind="ticket.supportRole" placeholder="Role ID"></label><label>Max Tickets<input type="range" min="1" max="20" data-bind="ticket.maxTickets"><output data-output-for="ticket.maxTickets"></output></label></article>
+          </div>
+        </section>
+
+        <section class="panel" data-panel-view="music">
+          <div class="panel-head"><div><h2>Music Studio</h2><p>Runtime settings for music availability, default volume, and 24/7 voice mode.</p></div><span class="server-badge">Live Config</span></div>
+          <article class="music-player">
+            <div class="disc" aria-hidden="true"></div>
+            <div>
+              <span class="kicker">Music Runtime</span>
+              <h2>Voice Session Controls</h2>
+              <p>These settings write to the same guild music config used by the bot.</p>
+              <div class="waveform" aria-hidden="true">
+                <i style="--h:18"></i><i style="--h:42"></i><i style="--h:28"></i><i style="--h:64"></i><i style="--h:36"></i><i style="--h:52"></i><i style="--h:22"></i><i style="--h:58"></i><i style="--h:30"></i><i style="--h:46"></i>
+              </div>
+              <div class="player-controls"><label>Default Volume<input type="range" min="0" max="100" data-bind="music.defaultVolume"><output data-output-for="music.defaultVolume"></output></label></div>
+            </div>
+            <div class="queue-list"><label class="toggle-row"><span><b>Enable Music</b><small>Music commands available</small></span><input type="checkbox" data-bind="music.enabled"></label><label class="toggle-row"><span><b>24/7 Mode</b><small>Keep Soezy in voice when enabled</small></span><input type="checkbox" data-bind="music.twentyFourSeven"></label><span>Auto-leave follows bot runtime settings when 24/7 mode is off.</span></div>
+          </article>
+        </section>
+
+        <section class="panel" data-panel-view="customRoles">
+          <div class="panel-head"><div><h2>Custom Role</h2><p>Self-managed role limits and identity previews.</p></div></div>
+          <div class="dash-grid two"><article class="control-card"><label class="toggle-row"><span><b>Enable Custom Roles</b><small>Let users manage identity roles</small></span><input type="checkbox" data-bind="customRoles.enabled"></label><label>Max Roles<input type="range" min="1" max="10" data-bind="customRoles.maxRoles"><output data-output-for="customRoles.maxRoles"></output></label></article><article class="role-preview"><span class="role-chip">Soezy Elite</span><span class="role-chip blue">Cyber Staff</span><span class="role-chip red">Security Core</span></article></div>
+        </section>
+
+        <section class="panel" data-panel-view="verification">
+          <div class="panel-head"><div><h2>Verification</h2><p>Verification panels, role assignment, and gate copy.</p></div></div>
+          <article class="control-card"><label class="toggle-row"><span><b>Enable Verification</b><small>Gate new members behind a panel</small></span><input type="checkbox" data-bind="verify.enabled"></label><label>Channel ID<input data-bind="verify.channel"></label><label>Verified Role ID<input data-bind="verify.role"></label><label>Panel Title<input data-bind="verify.title"></label><label>Panel Message<textarea rows="4" data-bind="verify.message"></textarea></label></article>
+        </section>
+
+        <section class="panel" data-panel-view="security">
+          <div class="panel-head"><div><h2>Security Score</h2><p>Live protection score based on module health and setup completeness.</p></div></div>
+          <article class="security-panel"><div class="big-score"><span data-security-score>--</span><small>/100</small></div><div class="module-strip" data-security-modules></div></article>
+        </section>
+
+        <section class="panel" data-panel-view="commands">
+          <div class="panel-head"><div><h2>Command Center</h2><p>Search commands, categories, aliases, and usage examples.</p></div><button class="button primary small" data-command-search type="button">Open Search</button></div>
+          <div class="command-search-bar"><input data-command-inline-search placeholder="Search commands, aliases, categories..."><button class="button ghost" data-command-clear type="button">Clear</button></div>
+          <div class="command-grid" data-command-grid></div>
+        </section>
+
+        <section class="panel" data-panel-view="analytics">
+          <div class="panel-head"><div><h2>Analytics</h2><p>Member totals, module coverage, and runtime activity.</p></div></div>
+          <div class="dash-grid four">
+            <article class="metric-card"><span>Members</span><b data-metric="members">--</b></article>
+            <article class="metric-card"><span>Commands</span><b data-status="commands">--</b></article>
+            <article class="metric-card"><span>WebSocket</span><b data-status="sync">--</b></article>
+            <article class="metric-card"><span>Uptime</span><b data-status="uptime">--</b></article>
+          </div>
+          <div class="chart-bars" data-analytics-chart><i style="height:64%"></i><i style="height:42%"></i><i style="height:78%"></i><i style="height:55%"></i><i style="height:92%"></i><i style="height:68%"></i><i style="height:48%"></i></div>
+        </section>
+
+        <section class="panel" data-panel-view="status">
+          <div class="panel-head"><div><h2>Status Page</h2><p>API health, websocket, shard status, memory, CPU, uptime, and node state.</p></div><span class="server-badge">Live</span></div>
+          <div class="status-grid">
+            <article class="status-card"><small>API Health</small><b data-status="online">--</b><span class="dot green"></span></article>
+            <article class="status-card"><small>WebSocket</small><b data-status="sync">--</b><span class="dot green"></span></article>
+            <article class="status-card"><small>Ping</small><b><span data-status="latency">--</span>ms</b></article>
+            <article class="status-card"><small>Uptime</small><b data-status="uptime">--</b></article>
+            <article class="status-card"><small>Shards</small><b data-status="shards">--</b></article>
+            <article class="status-card"><small>Clusters</small><b data-status="clusters">--</b></article>
+            <article class="status-card"><small>Memory</small><b data-status="memory">--</b></article>
+            <article class="status-card"><small>CPU Load</small><b data-status="cpu">--</b></article>
+            <article class="status-card"><small>Lavalink</small><b>Ready</b></article>
+          </div>
+        </section>
+
+        <section class="panel" data-panel-view="profile">
+          <div class="panel-head"><div><h2>Profile</h2><p>Your Discord session and dashboard permissions.</p></div></div>
+          <article class="user-summary">
+            <div class="home-user-avatar" data-user-avatar>U</div>
+            <div class="summary-copy"><h2 data-user-name>User</h2><p>Session is protected with Discord OAuth and CSRF tokens.</p><div class="home-stat-line"><span>Manageable <b data-user-manageable>0</b></span><span>Owned <b data-user-owned>0</b></span><span>With Bot <b data-user-with-bot>0</b></span></div></div>
+            <button class="button ghost small" data-logout type="button">Logout</button>
+          </article>
+        </section>
+
+        <section class="panel" data-panel-view="premium">
+          <div class="panel-head"><div><h2>Premium</h2><p>Unlock deeper automation, premium styling, and priority support.</p></div></div>
+          <div class="pricing-grid compact"><article class="price-card featured"><span>Recommended</span><h2>Premium Guard</h2><strong>$7<small>/mo</small></strong><p>Advanced antinuke, full dashboard modules, automod presets, and priority support.</p><a class="button primary" href="/premium">View Plans</a></article></div>
+        </section>
+      </div>
+      </div>
+    </main>
+  </div>
+
+  <div class="command-modal" data-command-modal hidden>
+    <section class="command-modal-card">
+      <div class="command-modal-head">
+        <div><span class="kicker">Command Search</span><h2>Find a command</h2></div>
+        <button class="icon-button" data-command-close type="button" aria-label="Close command search"><svg viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+      </div>
+      <input data-command-search-input placeholder="Search by name, category, alias, or description">
+      <div class="command-modal-results" data-command-results></div>
+    </section>
+  </div>
+
+  <div class="toast" data-toast></div>
+  <script src="/assets/colors.js?v=20260529a"></script>
+  <script src="/assets/config.js?v=20260529a"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/assets/app.js?v=20261015c"></script>
+  <script src="/assets/dashboard.js?v=20260602b"></script>
+  <script src="/assets/dashboard-fx.js?v=20261017b"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+{
+  "name": "soezy",
+  "version": "1.0.0",
+  "main": "web/server.js",
+  "scripts": {
+    "start": "node web/server.js",
+    "dev": "nodemon web/server.js",
+    "check": "node --check web/server.js && node --check web/dashboard.js && node --check web/remoteBridge.js && node --check web/soezy/config/index.js && node --check web/website.js && node --check web/public/assets/app.js && node --check web/public/assets/dashboard.js && node --check web/public/assets/dashboard-home.js && node --check web/public/assets/home.js",
+    "test:dashboard-home": "node --test web/tests/dashboardHome.test.js",
+    "test:home": "node --test web/tests/homePage.test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "Soezy Music Bot",
+  "dependencies": {
+    "axios": "^1.17.0",
+    "compression": "^1.8.1",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.6",
+    "discord.js": "^14.26.4",
+    "dotenv": "^16.6.1",
+    "express": "^4.22.2",
+    "express-rate-limit": "^8.5.2",
+    "express-session": "^1.19.0",
+    "helmet": "^8.2.0",
+    "libsodium-wrappers": "^0.7.16",
+    "mongoose": "^8.24.0",
+    "passport": "^0.7.0",
+    "passport-discord": "^0.1.4",
+    "sharp": "^0.34.5",
+    "shoukaku": "^4.3.0",
+    "socket.io": "^4.8.3",
+    "ws": "^8.21.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
