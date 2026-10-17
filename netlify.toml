@@ -1,0 +1,44 @@
+[build]
+  publish = "web/public"
+  command = ""
+
+# Clean URLs that the Express server normally maps to HTML files
+[[redirects]]
+  from = "/docs"
+  to = "/docs.html"
+  status = 200
+
+[[redirects]]
+  from = "/premium"
+  to = "/premium.html"
+  status = 200
+
+[[redirects]]
+  from = "/status-page"
+  to = "/status.html"
+  status = 200
+
+[[redirects]]
+  from = "/commands"
+  to = "/commands.html"
+  status = 200
+
+[[redirects]]
+  from = "/login"
+  to = "/login.html"
+  status = 200
+
+[[redirects]]
+  from = "/dashboard"
+  to = "/dashboard-home.html"
+  status = 200
+
+[[redirects]]
+  from = "/dashboard/*"
+  to = "/dashboard.html"
+  status = 200
+
+[[redirects]]
+  from = "/*"
+  to = "/error.html"
+  status = 404

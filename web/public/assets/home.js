@@ -2,7 +2,7 @@
   const placeholder = "--";
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const $$ = selector => document.querySelectorAll(selector);
-  const setText = (selector, value) => $$(selector).forEach(element => { element.textContent = value; });
+  const setText = (selector, value) => $$(selector).forEach(element => { element.dataset.translationKey = value; element.textContent = window.SOEZY_I18N?.t(value) || value; });
 
   const readableNumber = value => {
     const numeric = Number(value);
@@ -127,7 +127,8 @@
     const dashboardLink = document.querySelector("[data-dashboard-link]");
     if (accountLink) {
       accountLink.href = loggedIn ? "/dashboard" : "/login";
-      accountLink.textContent = loggedIn ? "Dashboard" : "Log in";
+      accountLink.dataset.translationKey = loggedIn ? "Dashboard" : "Log in";
+      accountLink.textContent = window.SOEZY_I18N?.t(accountLink.dataset.translationKey) || accountLink.dataset.translationKey;
     }
     if (dashboardLink) dashboardLink.href = loggedIn ? "/dashboard" : "/login?next=%2Fdashboard";
     await loadStats();
@@ -156,6 +157,7 @@
   try {
     const saved = JSON.parse(localStorage.getItem("soezy.language") || "null");
     if (saved?.code && saved?.flag) {
+      window.SOEZY_I18N?.apply(saved.code);
       setText("[data-current-language]", saved.code);
       setText("[data-current-flag]", saved.flag);
     }
@@ -164,6 +166,7 @@
     const code = button.dataset.langOption || "EN";
     const flag = button.dataset.flag || "🇬🇧";
     try { localStorage.setItem("soezy.language", JSON.stringify({ code, flag })); } catch {}
+    window.SOEZY_I18N?.apply(code);
     setText("[data-current-language]", code);
     setText("[data-current-flag]", flag);
     closeMenus();
