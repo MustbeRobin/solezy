@@ -1,0 +1,2697 @@
+{
+  "ok": true,
+  "commands": [
+    {
+      "name": "ban",
+      "description": "Ban a user",
+      "usage": "ban <@user> [reason]",
+      "aliases": [],
+      "category": "Moderation"
+    },
+    {
+      "name": "unban",
+      "description": "Unban a user",
+      "usage": "unban <userID> [reason]",
+      "aliases": [],
+      "category": "Moderation"
+    },
+    {
+      "name": "kick",
+      "description": "Kick a user",
+      "usage": "kick <@user> [reason]",
+      "aliases": [],
+      "category": "Moderation"
+    },
+    {
+      "name": "mute",
+      "description": "Mute a user",
+      "usage": "mute <@user> <duration> [reason]",
+      "aliases": [
+        "timeout"
+      ],
+      "category": "Moderation"
+    },
+    {
+      "name": "unmute",
+      "description": "Unmute a user",
+      "usage": "unmute <@user> [reason]",
+      "aliases": [
+        "untimeout"
+      ],
+      "category": "Moderation"
+    },
+    {
+      "name": "warn",
+      "description": "Warn a user",
+      "usage": "warn <@user> [reason]",
+      "aliases": [],
+      "category": "Moderation"
+    },
+    {
+      "name": "warnings",
+      "description": "View warnings",
+      "usage": "warnings [@user]",
+      "aliases": [
+        "warns"
+      ],
+      "category": "Moderation"
+    },
+    {
+      "name": "clearwarns",
+      "description": "Clear warnings",
+      "usage": "clearwarns <@user>",
+      "aliases": [
+        "clearwarnings"
+      ],
+      "category": "Moderation"
+    },
+    {
+      "name": "purge",
+      "description": "Delete messages",
+      "usage": "purge <amount> [@user]",
+      "aliases": [
+        "clear",
+        "prune"
+      ],
+      "category": "Moderation"
+    },
+    {
+      "name": "purge images",
+      "description": "Delete only images",
+      "usage": "purge images <amount>",
+      "aliases": [],
+      "category": "Moderation"
+    },
+    {
+      "name": "purge bots",
+      "description": "Delete bot messages",
+      "usage": "purge bots <amount>",
+      "aliases": [],
+      "category": "Moderation"
+    },
+    {
+      "name": "purge embeds",
+      "description": "Delete embeds",
+      "usage": "purge embeds <amount>",
+      "aliases": [],
+      "category": "Moderation"
+    },
+    {
+      "name": "purge links",
+      "description": "Delete links",
+      "usage": "purge links <amount>",
+      "aliases": [],
+      "category": "Moderation"
+    },
+    {
+      "name": "cl",
+      "description": "Clear text only (no media)",
+      "usage": "cl <amount>",
+      "aliases": [],
+      "category": "Moderation"
+    },
+    {
+      "name": "lock",
+      "description": "Lock a channel",
+      "usage": "lock [#channel] [reason]",
+      "aliases": [],
+      "category": "Moderation"
+    },
+    {
+      "name": "unlock",
+      "description": "Unlock a channel",
+      "usage": "unlock [#channel] [reason]",
+      "aliases": [],
+      "category": "Moderation"
+    },
+    {
+      "name": "slowmode",
+      "description": "Set slowmode",
+      "usage": "slowmode <duration/off>",
+      "aliases": [
+        "slow"
+      ],
+      "category": "Moderation"
+    },
+    {
+      "name": "nuke",
+      "description": "Nuke and recreate channel",
+      "usage": "nuke [reason]",
+      "aliases": [],
+      "category": "Moderation"
+    },
+    {
+      "name": "antinuke enable",
+      "description": "Enable anti-nuke",
+      "usage": "antinuke enable",
+      "aliases": [],
+      "category": "Anti-Nuke"
+    },
+    {
+      "name": "antinuke disable",
+      "description": "Disable anti-nuke",
+      "usage": "antinuke disable",
+      "aliases": [],
+      "category": "Anti-Nuke"
+    },
+    {
+      "name": "antinuke settings",
+      "description": "View settings",
+      "usage": "antinuke settings",
+      "aliases": [
+        "antinuke status"
+      ],
+      "category": "Anti-Nuke"
+    },
+    {
+      "name": "antinuke whitelist",
+      "description": "Whitelist a user",
+      "usage": "antinuke whitelist <@user>",
+      "aliases": [],
+      "category": "Anti-Nuke"
+    },
+    {
+      "name": "antinuke unwhitelist",
+      "description": "Remove from whitelist",
+      "usage": "antinuke unwhitelist <@user>",
+      "aliases": [],
+      "category": "Anti-Nuke"
+    },
+    {
+      "name": "antinuke setlogs",
+      "description": "Set logs channel",
+      "usage": "antinuke setlogs <#channel>",
+      "aliases": [],
+      "category": "Anti-Nuke"
+    },
+    {
+      "name": "antinuke maxbans",
+      "description": "Set max bans",
+      "usage": "antinuke maxbans <number>",
+      "aliases": [],
+      "category": "Anti-Nuke"
+    },
+    {
+      "name": "antinuke maxkicks",
+      "description": "Set max kicks",
+      "usage": "antinuke maxkicks <number>",
+      "aliases": [],
+      "category": "Anti-Nuke"
+    },
+    {
+      "name": "antinuke punishment",
+      "description": "Set punishment",
+      "usage": "antinuke punishment <ban/kick/strip>",
+      "aliases": [],
+      "category": "Anti-Nuke"
+    },
+    {
+      "name": "antibot enable",
+      "description": "Enable anti-bot",
+      "usage": "antibot enable",
+      "aliases": [],
+      "category": "Anti-Bot"
+    },
+    {
+      "name": "antibot disable",
+      "description": "Disable anti-bot",
+      "usage": "antibot disable",
+      "aliases": [],
+      "category": "Anti-Bot"
+    },
+    {
+      "name": "antibot settings",
+      "description": "View settings",
+      "usage": "antibot settings",
+      "aliases": [
+        "antibot status"
+      ],
+      "category": "Anti-Bot"
+    },
+    {
+      "name": "antibot whitelist",
+      "description": "Whitelist a bot",
+      "usage": "antibot whitelist <botID>",
+      "aliases": [],
+      "category": "Anti-Bot"
+    },
+    {
+      "name": "antibot unwhitelist",
+      "description": "Remove from whitelist",
+      "usage": "antibot unwhitelist <botID>",
+      "aliases": [],
+      "category": "Anti-Bot"
+    },
+    {
+      "name": "antibot setlogs",
+      "description": "Set logs channel",
+      "usage": "antibot setlogs <#channel>",
+      "aliases": [],
+      "category": "Anti-Bot"
+    },
+    {
+      "name": "antibot action",
+      "description": "Set action (kick/ban)",
+      "usage": "antibot action <kick/ban>",
+      "aliases": [],
+      "category": "Anti-Bot"
+    },
+    {
+      "name": "automod enable",
+      "description": "Enable automod",
+      "usage": "automod enable",
+      "aliases": [],
+      "category": "Auto-Mod"
+    },
+    {
+      "name": "automod disable",
+      "description": "Disable automod",
+      "usage": "automod disable",
+      "aliases": [],
+      "category": "Auto-Mod"
+    },
+    {
+      "name": "automod settings",
+      "description": "View settings",
+      "usage": "automod settings",
+      "aliases": [
+        "automod status"
+      ],
+      "category": "Auto-Mod"
+    },
+    {
+      "name": "automod antispam",
+      "description": "Toggle anti-spam",
+      "usage": "automod antispam <on/off>",
+      "aliases": [],
+      "category": "Auto-Mod"
+    },
+    {
+      "name": "automod antimention",
+      "description": "Toggle anti-mention",
+      "usage": "automod antimention <on/off>",
+      "aliases": [],
+      "category": "Auto-Mod"
+    },
+    {
+      "name": "automod anticaps",
+      "description": "Toggle anti-caps",
+      "usage": "automod anticaps <on/off>",
+      "aliases": [],
+      "category": "Auto-Mod"
+    },
+    {
+      "name": "automod antiinvite",
+      "description": "Toggle anti-invite",
+      "usage": "automod antiinvite <on/off>",
+      "aliases": [],
+      "category": "Auto-Mod"
+    },
+    {
+      "name": "antilink enable",
+      "description": "Enable anti-link",
+      "usage": "antilink enable",
+      "aliases": [],
+      "category": "Auto-Mod"
+    },
+    {
+      "name": "antilink disable",
+      "description": "Disable anti-link",
+      "usage": "antilink disable",
+      "aliases": [],
+      "category": "Auto-Mod"
+    },
+    {
+      "name": "antilink whitelist",
+      "description": "Whitelist a domain",
+      "usage": "antilink whitelist <domain>",
+      "aliases": [],
+      "category": "Auto-Mod"
+    },
+    {
+      "name": "antilink immunerole",
+      "description": "Add immune role",
+      "usage": "antilink immunerole <@role>",
+      "aliases": [],
+      "category": "Auto-Mod"
+    },
+    {
+      "name": "welcome enable",
+      "description": "Enable welcome",
+      "usage": "welcome enable",
+      "aliases": [],
+      "category": "Welcome"
+    },
+    {
+      "name": "welcome disable",
+      "description": "Disable welcome",
+      "usage": "welcome disable",
+      "aliases": [],
+      "category": "Welcome"
+    },
+    {
+      "name": "welcome setchannel",
+      "description": "Set welcome channel",
+      "usage": "welcome setchannel <#channel>",
+      "aliases": [],
+      "category": "Welcome"
+    },
+    {
+      "name": "welcome setmessage",
+      "description": "Set welcome message",
+      "usage": "welcome setmessage <message>",
+      "aliases": [],
+      "category": "Welcome"
+    },
+    {
+      "name": "welcome test",
+      "description": "Test welcome message",
+      "usage": "welcome test",
+      "aliases": [],
+      "category": "Welcome"
+    },
+    {
+      "name": "welcome settings",
+      "description": "View settings",
+      "usage": "welcome settings",
+      "aliases": [
+        "welcome status"
+      ],
+      "category": "Welcome"
+    },
+    {
+      "name": "goodbye enable",
+      "description": "Enable goodbye",
+      "usage": "goodbye enable",
+      "aliases": [],
+      "category": "Goodbye & Join DM"
+    },
+    {
+      "name": "goodbye disable",
+      "description": "Disable goodbye",
+      "usage": "goodbye disable",
+      "aliases": [],
+      "category": "Goodbye & Join DM"
+    },
+    {
+      "name": "goodbye setchannel",
+      "description": "Set goodbye channel",
+      "usage": "goodbye setchannel <#channel>",
+      "aliases": [],
+      "category": "Goodbye & Join DM"
+    },
+    {
+      "name": "goodbye setmessage",
+      "description": "Set goodbye message",
+      "usage": "goodbye setmessage <message>",
+      "aliases": [],
+      "category": "Goodbye & Join DM"
+    },
+    {
+      "name": "goodbye test",
+      "description": "Test goodbye message",
+      "usage": "goodbye test",
+      "aliases": [],
+      "category": "Goodbye & Join DM"
+    },
+    {
+      "name": "goodbye settings",
+      "description": "View settings",
+      "usage": "goodbye settings",
+      "aliases": [
+        "goodbye status"
+      ],
+      "category": "Goodbye & Join DM"
+    },
+    {
+      "name": "joindm enable",
+      "description": "Enable join DM",
+      "usage": "joindm enable",
+      "aliases": [],
+      "category": "Goodbye & Join DM"
+    },
+    {
+      "name": "joindm disable",
+      "description": "Disable join DM",
+      "usage": "joindm disable",
+      "aliases": [],
+      "category": "Goodbye & Join DM"
+    },
+    {
+      "name": "joindm setmessage",
+      "description": "Set DM message",
+      "usage": "joindm setmessage <message>",
+      "aliases": [],
+      "category": "Goodbye & Join DM"
+    },
+    {
+      "name": "joindm test",
+      "description": "Test join DM",
+      "usage": "joindm test",
+      "aliases": [],
+      "category": "Goodbye & Join DM"
+    },
+    {
+      "name": "joindm settings",
+      "description": "View settings",
+      "usage": "joindm settings",
+      "aliases": [],
+      "category": "Goodbye & Join DM"
+    },
+    {
+      "name": "boost enable",
+      "description": "Enable boost messages",
+      "usage": "boost enable",
+      "aliases": [],
+      "category": "Boost"
+    },
+    {
+      "name": "boost disable",
+      "description": "Disable boost messages",
+      "usage": "boost disable",
+      "aliases": [],
+      "category": "Boost"
+    },
+    {
+      "name": "boost setchannel",
+      "description": "Set boost channel",
+      "usage": "boost setchannel <#channel>",
+      "aliases": [],
+      "category": "Boost"
+    },
+    {
+      "name": "boost setmessage",
+      "description": "Set boost message",
+      "usage": "boost setmessage <message>",
+      "aliases": [],
+      "category": "Boost"
+    },
+    {
+      "name": "boost test",
+      "description": "Test boost message",
+      "usage": "boost test",
+      "aliases": [],
+      "category": "Boost"
+    },
+    {
+      "name": "boost settings",
+      "description": "View settings",
+      "usage": "boost settings",
+      "aliases": [
+        "boost status"
+      ],
+      "category": "Boost"
+    },
+    {
+      "name": "ticket enable",
+      "description": "Enable tickets",
+      "usage": "ticket enable",
+      "aliases": [],
+      "category": "Tickets"
+    },
+    {
+      "name": "ticket disable",
+      "description": "Disable tickets",
+      "usage": "ticket disable",
+      "aliases": [],
+      "category": "Tickets"
+    },
+    {
+      "name": "ticket setup",
+      "description": "Setup ticket system",
+      "usage": "ticket setup <#channel> <#category> <@role>",
+      "aliases": [],
+      "category": "Tickets"
+    },
+    {
+      "name": "ticket setchannel",
+      "description": "Set ticket panel channel",
+      "usage": "ticket setchannel <#channel>",
+      "aliases": [],
+      "category": "Tickets"
+    },
+    {
+      "name": "ticket setcategory",
+      "description": "Set ticket category",
+      "usage": "ticket setcategory <#category>",
+      "aliases": [],
+      "category": "Tickets"
+    },
+    {
+      "name": "ticket setrole",
+      "description": "Set support role",
+      "usage": "ticket setrole <@role>",
+      "aliases": [],
+      "category": "Tickets"
+    },
+    {
+      "name": "ticket setlogs",
+      "description": "Set logs channel",
+      "usage": "ticket setlogs <#channel>",
+      "aliases": [],
+      "category": "Tickets"
+    },
+    {
+      "name": "ticket send",
+      "description": "Send ticket panel",
+      "usage": "ticket send",
+      "aliases": [],
+      "category": "Tickets"
+    },
+    {
+      "name": "ticket close",
+      "description": "Close current ticket",
+      "usage": "ticket close",
+      "aliases": [],
+      "category": "Tickets"
+    },
+    {
+      "name": "ticket add",
+      "description": "Add user to ticket",
+      "usage": "ticket add <@user>",
+      "aliases": [],
+      "category": "Tickets"
+    },
+    {
+      "name": "ticket remove",
+      "description": "Remove user from ticket",
+      "usage": "ticket remove <@user>",
+      "aliases": [],
+      "category": "Tickets"
+    },
+    {
+      "name": "ticket transcript",
+      "description": "Generate transcript",
+      "usage": "ticket transcript",
+      "aliases": [],
+      "category": "Tickets"
+    },
+    {
+      "name": "ticket settings",
+      "description": "View settings",
+      "usage": "ticket settings",
+      "aliases": [
+        "ticket status"
+      ],
+      "category": "Tickets"
+    },
+    {
+      "name": "giveaway enable",
+      "description": "Enable giveaways",
+      "usage": "giveaway enable",
+      "aliases": [
+        "gw enable"
+      ],
+      "category": "Giveaways"
+    },
+    {
+      "name": "giveaway disable",
+      "description": "Disable giveaways",
+      "usage": "giveaway disable",
+      "aliases": [
+        "gw disable"
+      ],
+      "category": "Giveaways"
+    },
+    {
+      "name": "giveaway create",
+      "description": "Create a giveaway",
+      "usage": "giveaway create <duration> <winners> <prize>",
+      "aliases": [
+        "gw create",
+        "gcreate"
+      ],
+      "category": "Giveaways"
+    },
+    {
+      "name": "giveaway end",
+      "description": "End a giveaway",
+      "usage": "giveaway end <messageID>",
+      "aliases": [
+        "gw end",
+        "gend"
+      ],
+      "category": "Giveaways"
+    },
+    {
+      "name": "giveaway reroll",
+      "description": "Reroll a giveaway",
+      "usage": "giveaway reroll <messageID> [winners]",
+      "aliases": [
+        "gw reroll",
+        "greroll"
+      ],
+      "category": "Giveaways"
+    },
+    {
+      "name": "giveaway cancel",
+      "description": "Cancel a giveaway",
+      "usage": "giveaway cancel <messageID>",
+      "aliases": [
+        "gw cancel",
+        "gcancel"
+      ],
+      "category": "Giveaways"
+    },
+    {
+      "name": "giveaway list",
+      "description": "List active giveaways",
+      "usage": "giveaway list",
+      "aliases": [
+        "gw list",
+        "glist"
+      ],
+      "category": "Giveaways"
+    },
+    {
+      "name": "giveaway settings",
+      "description": "View settings",
+      "usage": "giveaway settings",
+      "aliases": [
+        "gw settings"
+      ],
+      "category": "Giveaways"
+    },
+    {
+      "name": "fun enable",
+      "description": "Enable fun commands",
+      "usage": "fun enable",
+      "aliases": [],
+      "category": "Fun"
+    },
+    {
+      "name": "fun disable",
+      "description": "Disable fun commands",
+      "usage": "fun disable",
+      "aliases": [],
+      "category": "Fun"
+    },
+    {
+      "name": "8ball",
+      "description": "Ask the magic 8ball",
+      "usage": "8ball <question>",
+      "aliases": [
+        "eightball"
+      ],
+      "category": "Fun"
+    },
+    {
+      "name": "coinflip",
+      "description": "Flip a coin",
+      "usage": "coinflip",
+      "aliases": [
+        "cf",
+        "flip"
+      ],
+      "category": "Fun"
+    },
+    {
+      "name": "dice",
+      "description": "Roll a dice",
+      "usage": "dice [sides]",
+      "aliases": [
+        "roll"
+      ],
+      "category": "Fun"
+    },
+    {
+      "name": "choose",
+      "description": "Choose between options",
+      "usage": "choose <option1> | <option2> | ...",
+      "aliases": [
+        "pick"
+      ],
+      "category": "Fun"
+    },
+    {
+      "name": "rps",
+      "description": "Rock Paper Scissors",
+      "usage": "rps <rock/paper/scissors>",
+      "aliases": [],
+      "category": "Fun"
+    },
+    {
+      "name": "meme",
+      "description": "Get a random meme",
+      "usage": "meme",
+      "aliases": [],
+      "category": "Fun"
+    },
+    {
+      "name": "joke",
+      "description": "Get a random joke",
+      "usage": "joke",
+      "aliases": [],
+      "category": "Fun"
+    },
+    {
+      "name": "fact",
+      "description": "Get a random fact",
+      "usage": "fact",
+      "aliases": [],
+      "category": "Fun"
+    },
+    {
+      "name": "quote",
+      "description": "Get a random quote",
+      "usage": "quote",
+      "aliases": [],
+      "category": "Fun"
+    },
+    {
+      "name": "reverse",
+      "description": "Reverse text",
+      "usage": "reverse <text>",
+      "aliases": [],
+      "category": "Fun"
+    },
+    {
+      "name": "mock",
+      "description": "Mock text",
+      "usage": "mock <text>",
+      "aliases": [],
+      "category": "Fun"
+    },
+    {
+      "name": "ship",
+      "description": "Ship two users",
+      "usage": "ship <@user1> <@user2>",
+      "aliases": [],
+      "category": "Fun"
+    },
+    {
+      "name": "rate",
+      "description": "Rate something",
+      "usage": "rate <thing>",
+      "aliases": [],
+      "category": "Fun"
+    },
+    {
+      "name": "hug",
+      "description": "Hug someone",
+      "usage": "hug <@user>",
+      "aliases": [],
+      "category": "Fun"
+    },
+    {
+      "name": "kiss",
+      "description": "Kiss someone",
+      "usage": "kiss <@user>",
+      "aliases": [],
+      "category": "Fun"
+    },
+    {
+      "name": "pat",
+      "description": "Pat someone",
+      "usage": "pat <@user>",
+      "aliases": [
+        "headpat"
+      ],
+      "category": "Fun"
+    },
+    {
+      "name": "slap",
+      "description": "Slap someone",
+      "usage": "slap <@user>",
+      "aliases": [],
+      "category": "Fun"
+    },
+    {
+      "name": "cuddle",
+      "description": "Cuddle someone",
+      "usage": "cuddle <@user>",
+      "aliases": [
+        "snuggle"
+      ],
+      "category": "Fun"
+    },
+    {
+      "name": "poke",
+      "description": "Poke someone",
+      "usage": "poke <@user>",
+      "aliases": [],
+      "category": "Fun"
+    },
+    {
+      "name": "wave",
+      "description": "Wave at someone or alone",
+      "usage": "wave [@user]",
+      "aliases": [
+        "hi"
+      ],
+      "category": "Fun"
+    },
+    {
+      "name": "bite",
+      "description": "Bite someone",
+      "usage": "bite <@user>",
+      "aliases": [],
+      "category": "Fun"
+    },
+    {
+      "name": "highfive",
+      "description": "High five someone",
+      "usage": "highfive <@user>",
+      "aliases": [
+        "hi5"
+      ],
+      "category": "Fun"
+    },
+    {
+      "name": "bonk",
+      "description": "Bonk someone",
+      "usage": "bonk <@user>",
+      "aliases": [],
+      "category": "Fun"
+    },
+    {
+      "name": "yeet",
+      "description": "Yeet someone",
+      "usage": "yeet <@user>",
+      "aliases": [],
+      "category": "Fun"
+    },
+    {
+      "name": "punch",
+      "description": "Punch someone",
+      "usage": "punch <@user>",
+      "aliases": [],
+      "category": "Fun"
+    },
+    {
+      "name": "kill",
+      "description": "Attack someone",
+      "usage": "kill <@user>",
+      "aliases": [],
+      "category": "Fun"
+    },
+    {
+      "name": "wink",
+      "description": "Wink at someone or alone",
+      "usage": "wink [@user]",
+      "aliases": [],
+      "category": "Fun"
+    },
+    {
+      "name": "lick",
+      "description": "Lick someone",
+      "usage": "lick <@user>",
+      "aliases": [],
+      "category": "Fun"
+    },
+    {
+      "name": "stare",
+      "description": "Stare at someone or alone",
+      "usage": "stare [@user]",
+      "aliases": [],
+      "category": "Fun"
+    },
+    {
+      "name": "boop",
+      "description": "Boop someone's nose",
+      "usage": "boop <@user>",
+      "aliases": [],
+      "category": "Fun"
+    },
+    {
+      "name": "nom",
+      "description": "Nom someone",
+      "usage": "nom <@user>",
+      "aliases": [],
+      "category": "Fun"
+    },
+    {
+      "name": "handhold",
+      "description": "Hold someone's hand",
+      "usage": "handhold <@user>",
+      "aliases": [
+        "holdhands"
+      ],
+      "category": "Fun"
+    },
+    {
+      "name": "tickle",
+      "description": "Tickle someone",
+      "usage": "tickle <@user>",
+      "aliases": [],
+      "category": "Fun"
+    },
+    {
+      "name": "feed",
+      "description": "Feed someone",
+      "usage": "feed <@user>",
+      "aliases": [],
+      "category": "Fun"
+    },
+    {
+      "name": "cry",
+      "description": "Express crying",
+      "usage": "cry",
+      "aliases": [],
+      "category": "Fun"
+    },
+    {
+      "name": "dance",
+      "description": "Start dancing",
+      "usage": "dance",
+      "aliases": [],
+      "category": "Fun"
+    },
+    {
+      "name": "blush",
+      "description": "Show blushing",
+      "usage": "blush",
+      "aliases": [],
+      "category": "Fun"
+    },
+    {
+      "name": "smile",
+      "description": "Show a smile",
+      "usage": "smile",
+      "aliases": [],
+      "category": "Fun"
+    },
+    {
+      "name": "pout",
+      "description": "Pout at something",
+      "usage": "pout",
+      "aliases": [],
+      "category": "Fun"
+    },
+    {
+      "name": "laugh",
+      "description": "Start laughing",
+      "usage": "laugh",
+      "aliases": [
+        "lol"
+      ],
+      "category": "Fun"
+    },
+    {
+      "name": "confused",
+      "description": "Express confusion",
+      "usage": "confused",
+      "aliases": [
+        "huh"
+      ],
+      "category": "Fun"
+    },
+    {
+      "name": "sleep",
+      "description": "Go to sleep",
+      "usage": "sleep",
+      "aliases": [
+        "zzz"
+      ],
+      "category": "Fun"
+    },
+    {
+      "name": "run",
+      "description": "Run away",
+      "usage": "run",
+      "aliases": [],
+      "category": "Fun"
+    },
+    {
+      "name": "thumbsup",
+      "description": "Give a thumbs up",
+      "usage": "thumbsup",
+      "aliases": [
+        "thumbs"
+      ],
+      "category": "Fun"
+    },
+    {
+      "name": "facepalm",
+      "description": "Facepalm at something",
+      "usage": "facepalm",
+      "aliases": [
+        "fp"
+      ],
+      "category": "Fun"
+    },
+    {
+      "name": "shrug",
+      "description": "Shrug at something",
+      "usage": "shrug",
+      "aliases": [],
+      "category": "Fun"
+    },
+    {
+      "name": "steal",
+      "description": "Steal a sticker",
+      "usage": "steal (reply to message)",
+      "aliases": [
+        "stealsticker",
+        "ss"
+      ],
+      "category": "Emoji & Sticky"
+    },
+    {
+      "name": "stealemoji",
+      "description": "Steal an emoji",
+      "usage": "stealemoji <emoji> [name]",
+      "aliases": [
+        "se",
+        "addemoji",
+        "ae"
+      ],
+      "category": "Emoji & Sticky"
+    },
+    {
+      "name": "deleteemoji",
+      "description": "Delete an emoji",
+      "usage": "deleteemoji <emoji>",
+      "aliases": [
+        "delemoji",
+        "removeemoji"
+      ],
+      "category": "Emoji & Sticky"
+    },
+    {
+      "name": "emojis",
+      "description": "List server emojis",
+      "usage": "emojis",
+      "aliases": [
+        "emojilist",
+        "listemojis"
+      ],
+      "category": "Emoji & Sticky"
+    },
+    {
+      "name": "stickers",
+      "description": "List server stickers",
+      "usage": "stickers",
+      "aliases": [
+        "stickerlist",
+        "liststickers"
+      ],
+      "category": "Emoji & Sticky"
+    },
+    {
+      "name": "enlarge",
+      "description": "Enlarge an emoji",
+      "usage": "enlarge <emoji>",
+      "aliases": [
+        "jumbo",
+        "big"
+      ],
+      "category": "Emoji & Sticky"
+    },
+    {
+      "name": "sticky enable",
+      "description": "Enable sticky system",
+      "usage": "sticky enable",
+      "aliases": [],
+      "category": "Emoji & Sticky"
+    },
+    {
+      "name": "sticky disable",
+      "description": "Disable sticky system",
+      "usage": "sticky disable",
+      "aliases": [],
+      "category": "Emoji & Sticky"
+    },
+    {
+      "name": "sticky set",
+      "description": "Set sticky message",
+      "usage": "sticky set <message>",
+      "aliases": [
+        "sticky add"
+      ],
+      "category": "Emoji & Sticky"
+    },
+    {
+      "name": "sticky remove",
+      "description": "Remove sticky message",
+      "usage": "sticky remove",
+      "aliases": [
+        "sticky delete"
+      ],
+      "category": "Emoji & Sticky"
+    },
+    {
+      "name": "sticky list",
+      "description": "List sticky messages",
+      "usage": "sticky list",
+      "aliases": [],
+      "category": "Emoji & Sticky"
+    },
+    {
+      "name": "sticky settings",
+      "description": "View settings",
+      "usage": "sticky settings",
+      "aliases": [],
+      "category": "Emoji & Sticky"
+    },
+    {
+      "name": "autoresponder enable",
+      "description": "Enable autoresponder",
+      "usage": "autoresponder enable",
+      "aliases": [
+        "ar enable"
+      ],
+      "category": "Auto Respond & React"
+    },
+    {
+      "name": "autoresponder disable",
+      "description": "Disable autoresponder",
+      "usage": "autoresponder disable",
+      "aliases": [
+        "ar disable"
+      ],
+      "category": "Auto Respond & React"
+    },
+    {
+      "name": "autoresponder add",
+      "description": "Add autoresponder",
+      "usage": "autoresponder add <trigger> | <response>",
+      "aliases": [
+        "ar add"
+      ],
+      "category": "Auto Respond & React"
+    },
+    {
+      "name": "autoresponder remove",
+      "description": "Remove autoresponder",
+      "usage": "autoresponder remove <trigger>",
+      "aliases": [
+        "ar remove",
+        "ar delete"
+      ],
+      "category": "Auto Respond & React"
+    },
+    {
+      "name": "autoresponder list",
+      "description": "List autoresponders",
+      "usage": "autoresponder list",
+      "aliases": [
+        "ar list"
+      ],
+      "category": "Auto Respond & React"
+    },
+    {
+      "name": "autoresponder clear",
+      "description": "Clear all autoresponders",
+      "usage": "autoresponder clear",
+      "aliases": [
+        "ar clear"
+      ],
+      "category": "Auto Respond & React"
+    },
+    {
+      "name": "autoresponder settings",
+      "description": "View settings",
+      "usage": "autoresponder settings",
+      "aliases": [
+        "ar settings"
+      ],
+      "category": "Auto Respond & React"
+    },
+    {
+      "name": "autoreact enable",
+      "description": "Enable autoreact",
+      "usage": "autoreact enable",
+      "aliases": [],
+      "category": "Auto Respond & React"
+    },
+    {
+      "name": "autoreact disable",
+      "description": "Disable autoreact",
+      "usage": "autoreact disable",
+      "aliases": [],
+      "category": "Auto Respond & React"
+    },
+    {
+      "name": "autoreact add",
+      "description": "Add autoreact",
+      "usage": "autoreact add <trigger> <emoji1> [emoji2] ...",
+      "aliases": [],
+      "category": "Auto Respond & React"
+    },
+    {
+      "name": "autoreact remove",
+      "description": "Remove autoreact",
+      "usage": "autoreact remove <trigger>",
+      "aliases": [
+        "autoreact delete"
+      ],
+      "category": "Auto Respond & React"
+    },
+    {
+      "name": "autoreact list",
+      "description": "List autoreacts",
+      "usage": "autoreact list",
+      "aliases": [],
+      "category": "Auto Respond & React"
+    },
+    {
+      "name": "autoreact clear",
+      "description": "Clear all autoreacts",
+      "usage": "autoreact clear",
+      "aliases": [],
+      "category": "Auto Respond & React"
+    },
+    {
+      "name": "autoreact settings",
+      "description": "View settings",
+      "usage": "autoreact settings",
+      "aliases": [],
+      "category": "Auto Respond & React"
+    },
+    {
+      "name": "logging enable",
+      "description": "Enable logging",
+      "usage": "logging enable",
+      "aliases": [
+        "logs enable"
+      ],
+      "category": "Logging"
+    },
+    {
+      "name": "logging disable",
+      "description": "Disable logging",
+      "usage": "logging disable",
+      "aliases": [
+        "logs disable"
+      ],
+      "category": "Logging"
+    },
+    {
+      "name": "logging setchannel",
+      "description": "Set logs channel",
+      "usage": "logging setchannel <#channel>",
+      "aliases": [
+        "logs setchannel"
+      ],
+      "category": "Logging"
+    },
+    {
+      "name": "logging toggle",
+      "description": "Toggle event logging",
+      "usage": "logging toggle <event>",
+      "aliases": [
+        "logs toggle"
+      ],
+      "category": "Logging"
+    },
+    {
+      "name": "logging events",
+      "description": "List all events",
+      "usage": "logging events",
+      "aliases": [
+        "logs events"
+      ],
+      "category": "Logging"
+    },
+    {
+      "name": "logging settings",
+      "description": "View settings",
+      "usage": "logging settings",
+      "aliases": [
+        "logs settings",
+        "logs status"
+      ],
+      "category": "Logging"
+    },
+    {
+      "name": "voice limit",
+      "description": "Set user limit",
+      "usage": "voice limit <number>",
+      "aliases": [],
+      "category": "Voice"
+    },
+    {
+      "name": "voice name",
+      "description": "Rename channel",
+      "usage": "voice name <name>",
+      "aliases": [
+        "voice rename"
+      ],
+      "category": "Voice"
+    },
+    {
+      "name": "voice lock",
+      "description": "Lock channel",
+      "usage": "voice lock",
+      "aliases": [],
+      "category": "Voice"
+    },
+    {
+      "name": "voice unlock",
+      "description": "Unlock channel",
+      "usage": "voice unlock",
+      "aliases": [],
+      "category": "Voice"
+    },
+    {
+      "name": "voice permit",
+      "description": "Allow user",
+      "usage": "voice permit <@user>",
+      "aliases": [
+        "voice allow"
+      ],
+      "category": "Voice"
+    },
+    {
+      "name": "voice reject",
+      "description": "Remove user access",
+      "usage": "voice reject <@user>",
+      "aliases": [
+        "voice deny"
+      ],
+      "category": "Voice"
+    },
+    {
+      "name": "voice claim",
+      "description": "Claim ownership",
+      "usage": "voice claim",
+      "aliases": [],
+      "category": "Voice"
+    },
+    {
+      "name": "voice transfer",
+      "description": "Transfer ownership",
+      "usage": "voice transfer <@user>",
+      "aliases": [],
+      "category": "Voice"
+    },
+    {
+      "name": "tempvoice enable",
+      "description": "Enable temp voice",
+      "usage": "tempvoice enable",
+      "aliases": [
+        "tv enable"
+      ],
+      "category": "Temp Voice"
+    },
+    {
+      "name": "tempvoice disable",
+      "description": "Disable temp voice",
+      "usage": "tempvoice disable",
+      "aliases": [
+        "tv disable"
+      ],
+      "category": "Temp Voice"
+    },
+    {
+      "name": "tempvoice setchannel",
+      "description": "Set create channel",
+      "usage": "tempvoice setchannel <#channel>",
+      "aliases": [
+        "tv setchannel"
+      ],
+      "category": "Temp Voice"
+    },
+    {
+      "name": "tempvoice setcategory",
+      "description": "Set category",
+      "usage": "tempvoice setcategory <#category>",
+      "aliases": [
+        "tv setcategory"
+      ],
+      "category": "Temp Voice"
+    },
+    {
+      "name": "tempvoice setname",
+      "description": "Set default name",
+      "usage": "tempvoice setname <name>",
+      "aliases": [
+        "tv setname"
+      ],
+      "category": "Temp Voice"
+    },
+    {
+      "name": "tempvoice settings",
+      "description": "View settings",
+      "usage": "tempvoice settings",
+      "aliases": [
+        "tv settings"
+      ],
+      "category": "Temp Voice"
+    },
+    {
+      "name": "media enable",
+      "description": "Enable media system",
+      "usage": "media enable",
+      "aliases": [],
+      "category": "Media Channels"
+    },
+    {
+      "name": "media disable",
+      "description": "Disable media system",
+      "usage": "media disable",
+      "aliases": [],
+      "category": "Media Channels"
+    },
+    {
+      "name": "media add",
+      "description": "Add media-only channel",
+      "usage": "media add <#channel>",
+      "aliases": [],
+      "category": "Media Channels"
+    },
+    {
+      "name": "media remove",
+      "description": "Remove media-only channel",
+      "usage": "media remove <#channel>",
+      "aliases": [],
+      "category": "Media Channels"
+    },
+    {
+      "name": "media list",
+      "description": "List media channels",
+      "usage": "media list",
+      "aliases": [],
+      "category": "Media Channels"
+    },
+    {
+      "name": "media setlogs",
+      "description": "Set delete logs channel",
+      "usage": "media setlogs <#channel>",
+      "aliases": [],
+      "category": "Media Channels"
+    },
+    {
+      "name": "media settings",
+      "description": "View settings",
+      "usage": "media settings",
+      "aliases": [],
+      "category": "Media Channels"
+    },
+    {
+      "name": "afk enable",
+      "description": "Enable AFK system",
+      "usage": "afk enable",
+      "aliases": [],
+      "category": "AFK"
+    },
+    {
+      "name": "afk disable",
+      "description": "Disable AFK system",
+      "usage": "afk disable",
+      "aliases": [],
+      "category": "AFK"
+    },
+    {
+      "name": "afk",
+      "description": "Set AFK status (server only)",
+      "usage": "afk [reason]",
+      "aliases": [],
+      "category": "AFK"
+    },
+    {
+      "name": "afk global",
+      "description": "Set global AFK status (all servers)",
+      "usage": "afk global [reason]",
+      "aliases": [
+        "gafk"
+      ],
+      "category": "AFK"
+    },
+    {
+      "name": "afk server",
+      "description": "Set server-specific AFK status",
+      "usage": "afk server [reason]",
+      "aliases": [
+        "safk"
+      ],
+      "category": "AFK"
+    },
+    {
+      "name": "afk remove",
+      "description": "Remove AFK status",
+      "usage": "afk remove",
+      "aliases": [
+        "afk off"
+      ],
+      "category": "AFK"
+    },
+    {
+      "name": "afk list",
+      "description": "List all AFK users in this server",
+      "usage": "afk list",
+      "aliases": [],
+      "category": "AFK"
+    },
+    {
+      "name": "afk mentions",
+      "description": "View who mentioned you while AFK",
+      "usage": "afk mentions",
+      "aliases": [],
+      "category": "AFK"
+    },
+    {
+      "name": "afk clear",
+      "description": "Clear all your AFK mentions",
+      "usage": "afk clear",
+      "aliases": [],
+      "category": "AFK"
+    },
+    {
+      "name": "afk setmessage",
+      "description": "Set AFK message template",
+      "usage": "afk setmessage <message>",
+      "aliases": [],
+      "category": "AFK"
+    },
+    {
+      "name": "afk settings",
+      "description": "View AFK settings",
+      "usage": "afk settings",
+      "aliases": [],
+      "category": "AFK"
+    },
+    {
+      "name": "birthday enable",
+      "description": "Enable birthdays",
+      "usage": "birthday enable",
+      "aliases": [
+        "bday enable"
+      ],
+      "category": "Birthday"
+    },
+    {
+      "name": "birthday disable",
+      "description": "Disable birthdays",
+      "usage": "birthday disable",
+      "aliases": [
+        "bday disable"
+      ],
+      "category": "Birthday"
+    },
+    {
+      "name": "birthday set",
+      "description": "Set your birthday",
+      "usage": "birthday set <YYYY-MM-DD>",
+      "aliases": [
+        "bday set"
+      ],
+      "category": "Birthday"
+    },
+    {
+      "name": "birthday remove",
+      "description": "Remove your birthday",
+      "usage": "birthday remove",
+      "aliases": [
+        "bday remove"
+      ],
+      "category": "Birthday"
+    },
+    {
+      "name": "birthday setchannel",
+      "description": "Set birthday channel",
+      "usage": "birthday setchannel <#channel>",
+      "aliases": [
+        "bday setchannel"
+      ],
+      "category": "Birthday"
+    },
+    {
+      "name": "birthday setrole",
+      "description": "Set birthday role",
+      "usage": "birthday setrole <@role>",
+      "aliases": [
+        "bday setrole"
+      ],
+      "category": "Birthday"
+    },
+    {
+      "name": "birthday setmessage",
+      "description": "Set birthday message",
+      "usage": "birthday setmessage <message>",
+      "aliases": [
+        "bday setmessage"
+      ],
+      "category": "Birthday"
+    },
+    {
+      "name": "birthday list",
+      "description": "List upcoming birthdays",
+      "usage": "birthday list",
+      "aliases": [
+        "bday list"
+      ],
+      "category": "Birthday"
+    },
+    {
+      "name": "birthday settings",
+      "description": "View settings",
+      "usage": "birthday settings",
+      "aliases": [
+        "bday settings"
+      ],
+      "category": "Birthday"
+    },
+    {
+      "name": "wall enable",
+      "description": "Enable wall system & auto-create roles",
+      "usage": "wall enable",
+      "aliases": [],
+      "category": "Wall System"
+    },
+    {
+      "name": "wall disable",
+      "description": "Disable wall system",
+      "usage": "wall disable",
+      "aliases": [],
+      "category": "Wall System"
+    },
+    {
+      "name": "wall quarantine @user [reason]",
+      "description": "Quarantine a user (removes roles, blocks commands)",
+      "usage": "wall quarantine @user [reason]",
+      "aliases": [
+        "wall q"
+      ],
+      "category": "Wall System"
+    },
+    {
+      "name": "wall release @user",
+      "description": "Release a user from quarantine (restores roles)",
+      "usage": "wall release @user",
+      "aliases": [
+        "wall uq"
+      ],
+      "category": "Wall System"
+    },
+    {
+      "name": "wall immune @user",
+      "description": "Toggle immunity for a user",
+      "usage": "wall immune @user",
+      "aliases": [],
+      "category": "Wall System"
+    },
+    {
+      "name": "wall list",
+      "description": "List quarantined users",
+      "usage": "wall list",
+      "aliases": [],
+      "category": "Wall System"
+    },
+    {
+      "name": "wall setlogs #channel",
+      "description": "Set log channel",
+      "usage": "wall setlogs #channel",
+      "aliases": [],
+      "category": "Wall System"
+    },
+    {
+      "name": "wall settings",
+      "description": "View wall settings",
+      "usage": "wall settings",
+      "aliases": [],
+      "category": "Wall System"
+    },
+    {
+      "name": "suggestions enable",
+      "description": "Enable suggestions",
+      "usage": "suggestions enable",
+      "aliases": [
+        "suggest enable"
+      ],
+      "category": "Suggestions"
+    },
+    {
+      "name": "suggestions disable",
+      "description": "Disable suggestions",
+      "usage": "suggestions disable",
+      "aliases": [
+        "suggest disable"
+      ],
+      "category": "Suggestions"
+    },
+    {
+      "name": "suggestions setchannel",
+      "description": "Set suggestions channel",
+      "usage": "suggestions setchannel <#channel>",
+      "aliases": [
+        "suggest setchannel"
+      ],
+      "category": "Suggestions"
+    },
+    {
+      "name": "suggest",
+      "description": "Make a suggestion",
+      "usage": "suggest <suggestion>",
+      "aliases": [],
+      "category": "Suggestions"
+    },
+    {
+      "name": "suggestions settings",
+      "description": "View settings",
+      "usage": "suggestions settings",
+      "aliases": [
+        "suggest settings"
+      ],
+      "category": "Suggestions"
+    },
+    {
+      "name": "buttonrole create",
+      "description": "Create button role panel",
+      "usage": "buttonrole create <#channel> <title> | <description>",
+      "aliases": [
+        "br create"
+      ],
+      "category": "Roles"
+    },
+    {
+      "name": "buttonrole add",
+      "description": "Add role to button panel",
+      "usage": "buttonrole add <messageID> <@role> <label> [emoji]",
+      "aliases": [
+        "br add"
+      ],
+      "category": "Roles"
+    },
+    {
+      "name": "buttonrole remove",
+      "description": "Remove role from button panel",
+      "usage": "buttonrole remove <messageID> <@role>",
+      "aliases": [
+        "br remove"
+      ],
+      "category": "Roles"
+    },
+    {
+      "name": "buttonrole list",
+      "description": "List button role panels",
+      "usage": "buttonrole list",
+      "aliases": [
+        "br list"
+      ],
+      "category": "Roles"
+    },
+    {
+      "name": "dropdownrole create",
+      "description": "Create dropdown role panel",
+      "usage": "dropdownrole create <#channel> <title> | <description>",
+      "aliases": [
+        "dr create"
+      ],
+      "category": "Roles"
+    },
+    {
+      "name": "dropdownrole add",
+      "description": "Add role to dropdown panel",
+      "usage": "dropdownrole add <messageID> <@role> <label> [description]",
+      "aliases": [
+        "dr add"
+      ],
+      "category": "Roles"
+    },
+    {
+      "name": "dropdownrole remove",
+      "description": "Remove role from dropdown panel",
+      "usage": "dropdownrole remove <messageID> <@role>",
+      "aliases": [
+        "dr remove"
+      ],
+      "category": "Roles"
+    },
+    {
+      "name": "dropdownrole list",
+      "description": "List dropdown role panels",
+      "usage": "dropdownrole list",
+      "aliases": [
+        "dr list"
+      ],
+      "category": "Roles"
+    },
+    {
+      "name": "customrole enable",
+      "description": "Enable custom roles",
+      "usage": "customrole enable",
+      "aliases": [
+        "cr enable"
+      ],
+      "category": "Roles"
+    },
+    {
+      "name": "customrole disable",
+      "description": "Disable custom roles",
+      "usage": "customrole disable",
+      "aliases": [
+        "cr disable"
+      ],
+      "category": "Roles"
+    },
+    {
+      "name": "customrole create",
+      "description": "Create a custom role",
+      "usage": "customrole create <n> <color>",
+      "aliases": [
+        "cr create"
+      ],
+      "category": "Roles"
+    },
+    {
+      "name": "customrole delete",
+      "description": "Delete your custom role",
+      "usage": "customrole delete",
+      "aliases": [
+        "cr delete"
+      ],
+      "category": "Roles"
+    },
+    {
+      "name": "customrole edit",
+      "description": "Edit your custom role",
+      "usage": "customrole edit <name/color> <value>",
+      "aliases": [
+        "cr edit"
+      ],
+      "category": "Roles"
+    },
+    {
+      "name": "customrole settings",
+      "description": "View custom role settings",
+      "usage": "customrole settings",
+      "aliases": [
+        "cr settings"
+      ],
+      "category": "Roles"
+    },
+    {
+      "name": "autorole add",
+      "description": "Add an auto role on join",
+      "usage": "autorole add <@role>",
+      "aliases": [],
+      "category": "Roles"
+    },
+    {
+      "name": "autorole remove",
+      "description": "Remove an auto role",
+      "usage": "autorole remove <@role>",
+      "aliases": [],
+      "category": "Roles"
+    },
+    {
+      "name": "autorole list",
+      "description": "List all auto roles",
+      "usage": "autorole list",
+      "aliases": [],
+      "category": "Roles"
+    },
+    {
+      "name": "autorole clear",
+      "description": "Clear all auto roles",
+      "usage": "autorole clear",
+      "aliases": [],
+      "category": "Roles"
+    },
+    {
+      "name": "economy enable",
+      "description": "Enable economy",
+      "usage": "economy enable",
+      "aliases": [],
+      "category": "General"
+    },
+    {
+      "name": "economy disable",
+      "description": "Disable economy",
+      "usage": "economy disable",
+      "aliases": [],
+      "category": "General"
+    },
+    {
+      "name": "balance",
+      "description": "Check balance",
+      "usage": "balance [@user]",
+      "aliases": [
+        "bal",
+        "money"
+      ],
+      "category": "General"
+    },
+    {
+      "name": "daily",
+      "description": "Claim daily reward",
+      "usage": "daily",
+      "aliases": [],
+      "category": "General"
+    },
+    {
+      "name": "work",
+      "description": "Work for coins",
+      "usage": "work",
+      "aliases": [],
+      "category": "General"
+    },
+    {
+      "name": "pay",
+      "description": "Pay another user",
+      "usage": "pay <@user> <amount>",
+      "aliases": [
+        "give",
+        "transfer"
+      ],
+      "category": "General"
+    },
+    {
+      "name": "deposit",
+      "description": "Deposit to bank",
+      "usage": "deposit <amount/all>",
+      "aliases": [
+        "dep"
+      ],
+      "category": "General"
+    },
+    {
+      "name": "withdraw",
+      "description": "Withdraw from bank",
+      "usage": "withdraw <amount/all>",
+      "aliases": [
+        "with"
+      ],
+      "category": "General"
+    },
+    {
+      "name": "rob",
+      "description": "Rob another user",
+      "usage": "rob <@user>",
+      "aliases": [
+        "steal"
+      ],
+      "category": "General"
+    },
+    {
+      "name": "baltop",
+      "description": "Balance leaderboard",
+      "usage": "baltop [page]",
+      "aliases": [
+        "richest"
+      ],
+      "category": "General"
+    },
+    {
+      "name": "economy settings",
+      "description": "View economy settings",
+      "usage": "economy settings",
+      "aliases": [
+        "economy status"
+      ],
+      "category": "General"
+    },
+    {
+      "name": "confession enable",
+      "description": "Enable confessions",
+      "usage": "confession enable",
+      "aliases": [
+        "confess enable"
+      ],
+      "category": "General"
+    },
+    {
+      "name": "confession disable",
+      "description": "Disable confessions",
+      "usage": "confession disable",
+      "aliases": [
+        "confess disable"
+      ],
+      "category": "General"
+    },
+    {
+      "name": "confession setchannel",
+      "description": "Set confession channel",
+      "usage": "confession setchannel <#channel>",
+      "aliases": [
+        "confess setchannel"
+      ],
+      "category": "General"
+    },
+    {
+      "name": "confession setlogs",
+      "description": "Set confession logs channel",
+      "usage": "confession setlogs <#channel>",
+      "aliases": [
+        "confess setlogs"
+      ],
+      "category": "General"
+    },
+    {
+      "name": "confession ban",
+      "description": "Ban user from confessing",
+      "usage": "confession ban <@user>",
+      "aliases": [
+        "confess ban"
+      ],
+      "category": "General"
+    },
+    {
+      "name": "confession unban",
+      "description": "Unban user from confessing",
+      "usage": "confession unban <@user>",
+      "aliases": [
+        "confess unban"
+      ],
+      "category": "General"
+    },
+    {
+      "name": "confession settings",
+      "description": "View confession settings",
+      "usage": "confession settings",
+      "aliases": [
+        "confess settings"
+      ],
+      "category": "General"
+    },
+    {
+      "name": "counting enable",
+      "description": "Enable counting system",
+      "usage": "counting enable",
+      "aliases": [],
+      "category": "General"
+    },
+    {
+      "name": "counting disable",
+      "description": "Disable counting system",
+      "usage": "counting disable",
+      "aliases": [],
+      "category": "General"
+    },
+    {
+      "name": "counting setchannel",
+      "description": "Set counting channel",
+      "usage": "counting setchannel <#channel>",
+      "aliases": [],
+      "category": "General"
+    },
+    {
+      "name": "counting reset",
+      "description": "Reset the count to 0",
+      "usage": "counting reset",
+      "aliases": [],
+      "category": "General"
+    },
+    {
+      "name": "counting stats",
+      "description": "View counting statistics",
+      "usage": "counting stats",
+      "aliases": [],
+      "category": "General"
+    },
+    {
+      "name": "counting settings",
+      "description": "View counting settings",
+      "usage": "counting settings",
+      "aliases": [
+        "counting status"
+      ],
+      "category": "General"
+    },
+    {
+      "name": "invites enable",
+      "description": "Enable invite tracking",
+      "usage": "invites enable",
+      "aliases": [],
+      "category": "General"
+    },
+    {
+      "name": "invites disable",
+      "description": "Disable invite tracking",
+      "usage": "invites disable",
+      "aliases": [],
+      "category": "General"
+    },
+    {
+      "name": "invites",
+      "description": "Check invites",
+      "usage": "invites [@user]",
+      "aliases": [
+        "inv"
+      ],
+      "category": "General"
+    },
+    {
+      "name": "invites leaderboard",
+      "description": "Invite leaderboard",
+      "usage": "invites leaderboard",
+      "aliases": [
+        "invites lb",
+        "invites top"
+      ],
+      "category": "General"
+    },
+    {
+      "name": "invites reset",
+      "description": "Reset invites",
+      "usage": "invites reset [@user]",
+      "aliases": [],
+      "category": "General"
+    },
+    {
+      "name": "invites settings",
+      "description": "View settings",
+      "usage": "invites settings",
+      "aliases": [],
+      "category": "General"
+    },
+    {
+      "name": "premium status",
+      "description": "Check your premium status",
+      "usage": "premium status",
+      "aliases": [
+        "premium check",
+        "prem status"
+      ],
+      "category": "Settings"
+    },
+    {
+      "name": "premium plans",
+      "description": "View all premium plans",
+      "usage": "premium plans",
+      "aliases": [
+        "premium info",
+        "prem plans"
+      ],
+      "category": "Settings"
+    },
+    {
+      "name": "premium add",
+      "description": "Give premium to user/guild (owner only)",
+      "usage": "premium add <user/guild> <id> <plan> [days]",
+      "aliases": [
+        "prem add"
+      ],
+      "category": "Settings"
+    },
+    {
+      "name": "premium remove",
+      "description": "Revoke premium (owner only)",
+      "usage": "premium remove <user/guild> <id>",
+      "aliases": [
+        "prem remove"
+      ],
+      "category": "Settings"
+    },
+    {
+      "name": "premium list",
+      "description": "List all premium holders (owner only)",
+      "usage": "premium list",
+      "aliases": [
+        "prem list"
+      ],
+      "category": "Settings"
+    },
+    {
+      "name": "command enable",
+      "description": "Enable a command",
+      "usage": "command enable <command>",
+      "aliases": [
+        "cmd enable"
+      ],
+      "category": "Settings"
+    },
+    {
+      "name": "command disable",
+      "description": "Disable a command",
+      "usage": "command disable <command>",
+      "aliases": [
+        "cmd disable"
+      ],
+      "category": "Settings"
+    },
+    {
+      "name": "command list",
+      "description": "List disabled commands",
+      "usage": "command list",
+      "aliases": [
+        "cmd list"
+      ],
+      "category": "Settings"
+    },
+    {
+      "name": "system enable",
+      "description": "Enable a system",
+      "usage": "system enable <s>",
+      "aliases": [],
+      "category": "Settings"
+    },
+    {
+      "name": "system disable",
+      "description": "Disable a system",
+      "usage": "system disable <s>",
+      "aliases": [],
+      "category": "Settings"
+    },
+    {
+      "name": "system list",
+      "description": "List all systems and their status",
+      "usage": "system list",
+      "aliases": [],
+      "category": "Settings"
+    },
+    {
+      "name": "botset name",
+      "description": "Change bot nickname in this server",
+      "usage": "botset name <new name>",
+      "aliases": [
+        "setname"
+      ],
+      "category": "Settings"
+    },
+    {
+      "name": "botset avatar",
+      "description": "Set server-specific bot avatar",
+      "usage": "botset avatar <url>",
+      "aliases": [
+        "setavatar"
+      ],
+      "category": "Settings"
+    },
+    {
+      "name": "botset banner",
+      "description": "Set server-specific bot banner",
+      "usage": "botset banner <url>",
+      "aliases": [
+        "setbanner"
+      ],
+      "category": "Settings"
+    },
+    {
+      "name": "botset reset",
+      "description": "Reset all bot identity settings",
+      "usage": "botset reset",
+      "aliases": [],
+      "category": "Settings"
+    },
+    {
+      "name": "help",
+      "description": "Show help menu",
+      "usage": "help [command]",
+      "aliases": [
+        "h",
+        "commands"
+      ],
+      "category": "Settings"
+    },
+    {
+      "name": "ping",
+      "description": "Check bot latency",
+      "usage": "ping",
+      "aliases": [
+        "latency"
+      ],
+      "category": "Settings"
+    },
+    {
+      "name": "avatar",
+      "description": "Get user avatar",
+      "usage": "avatar [@user]",
+      "aliases": [
+        "av",
+        "pfp"
+      ],
+      "category": "Settings"
+    },
+    {
+      "name": "banner",
+      "description": "Get user banner",
+      "usage": "banner [@user]",
+      "aliases": [],
+      "category": "Settings"
+    },
+    {
+      "name": "userinfo",
+      "description": "Get user info",
+      "usage": "userinfo [@user]",
+      "aliases": [
+        "ui",
+        "whois"
+      ],
+      "category": "Settings"
+    },
+    {
+      "name": "serverinfo",
+      "description": "Get server info",
+      "usage": "serverinfo",
+      "aliases": [
+        "si",
+        "server"
+      ],
+      "category": "Settings"
+    },
+    {
+      "name": "roleinfo",
+      "description": "Get role info",
+      "usage": "roleinfo <@role>",
+      "aliases": [
+        "ri"
+      ],
+      "category": "Settings"
+    },
+    {
+      "name": "channelinfo",
+      "description": "Get channel info",
+      "usage": "channelinfo [#channel]",
+      "aliases": [
+        "ci"
+      ],
+      "category": "Settings"
+    },
+    {
+      "name": "membercount",
+      "description": "Get member count",
+      "usage": "membercount",
+      "aliases": [
+        "mc",
+        "members"
+      ],
+      "category": "Settings"
+    },
+    {
+      "name": "botinfo",
+      "description": "Get bot info",
+      "usage": "botinfo",
+      "aliases": [
+        "info",
+        "stats",
+        "about"
+      ],
+      "category": "Settings"
+    },
+    {
+      "name": "prefix",
+      "description": "View or change prefix",
+      "usage": "prefix [new prefix]",
+      "aliases": [
+        "setprefix"
+      ],
+      "category": "Settings"
+    },
+    {
+      "name": "poll",
+      "description": "Create a poll",
+      "usage": "poll <question> | <option1> | <option2>",
+      "aliases": [],
+      "category": "Settings"
+    },
+    {
+      "name": "remind",
+      "description": "Set a reminder",
+      "usage": "remind <time> <message>",
+      "aliases": [
+        "reminder"
+      ],
+      "category": "Settings"
+    },
+    {
+      "name": "snipe",
+      "description": "View deleted messages",
+      "usage": "snipe [number]",
+      "aliases": [
+        "s"
+      ],
+      "category": "Settings"
+    },
+    {
+      "name": "invite",
+      "description": "Get bot invite link",
+      "usage": "invite",
+      "aliases": [
+        "inv"
+      ],
+      "category": "Settings"
+    },
+    {
+      "name": "noprefix add",
+      "description": "Add a no-prefix user",
+      "usage": "noprefix add <@user>",
+      "aliases": [
+        "npx add"
+      ],
+      "category": "Settings"
+    },
+    {
+      "name": "noprefix remove",
+      "description": "Remove a no-prefix user",
+      "usage": "noprefix remove <@user>",
+      "aliases": [
+        "npx remove"
+      ],
+      "category": "Settings"
+    },
+    {
+      "name": "noprefix list",
+      "description": "List no-prefix users",
+      "usage": "noprefix list",
+      "aliases": [
+        "npx list"
+      ],
+      "category": "Settings"
+    },
+    {
+      "name": "badword add",
+      "description": "Add a banned word",
+      "usage": "badword add <word>",
+      "aliases": [
+        "bw add"
+      ],
+      "category": "Settings"
+    },
+    {
+      "name": "badword remove",
+      "description": "Remove a banned word",
+      "usage": "badword remove <word>",
+      "aliases": [
+        "bw remove"
+      ],
+      "category": "Settings"
+    },
+    {
+      "name": "badword list",
+      "description": "List banned words",
+      "usage": "badword list",
+      "aliases": [
+        "bw list"
+      ],
+      "category": "Settings"
+    },
+    {
+      "name": "badword clear",
+      "description": "Clear all banned words",
+      "usage": "badword clear",
+      "aliases": [
+        "bw clear"
+      ],
+      "category": "Settings"
+    },
+    {
+      "name": "badwordimmune addrole",
+      "description": "Add immune role from bad word filter",
+      "usage": "badwordimmune addrole <@role>",
+      "aliases": [],
+      "category": "Settings"
+    },
+    {
+      "name": "badwordimmune removerole",
+      "description": "Remove immune role",
+      "usage": "badwordimmune removerole <@role>",
+      "aliases": [],
+      "category": "Settings"
+    },
+    {
+      "name": "badwordimmune list",
+      "description": "List immune roles",
+      "usage": "badwordimmune list",
+      "aliases": [],
+      "category": "Settings"
+    },
+    {
+      "name": "nsfwword add",
+      "description": "Add an NSFW word",
+      "usage": "nsfwword add <word>",
+      "aliases": [],
+      "category": "Settings"
+    },
+    {
+      "name": "nsfwword remove",
+      "description": "Remove an NSFW word",
+      "usage": "nsfwword remove <word>",
+      "aliases": [],
+      "category": "Settings"
+    },
+    {
+      "name": "nsfwword list",
+      "description": "List NSFW words",
+      "usage": "nsfwword list",
+      "aliases": [],
+      "category": "Settings"
+    },
+    {
+      "name": "nsfwimmune enable",
+      "description": "Enable NSFW filter",
+      "usage": "nsfwimmune enable",
+      "aliases": [],
+      "category": "Settings"
+    },
+    {
+      "name": "nsfwimmune disable",
+      "description": "Disable NSFW filter",
+      "usage": "nsfwimmune disable",
+      "aliases": [],
+      "category": "Settings"
+    },
+    {
+      "name": "nsfwimmune addrole",
+      "description": "Add immune role from NSFW filter",
+      "usage": "nsfwimmune addrole <@role>",
+      "aliases": [],
+      "category": "Settings"
+    },
+    {
+      "name": "antilinkimmune addrole",
+      "description": "Add role immune to anti-link",
+      "usage": "antilinkimmune addrole <@role>",
+      "aliases": [
+        "alimmune addrole"
+      ],
+      "category": "Settings"
+    },
+    {
+      "name": "antilinkimmune removerole",
+      "description": "Remove immune role",
+      "usage": "antilinkimmune removerole <@role>",
+      "aliases": [
+        "alimmune removerole"
+      ],
+      "category": "Settings"
+    },
+    {
+      "name": "antilinkimmune list",
+      "description": "List immune roles",
+      "usage": "antilinkimmune list",
+      "aliases": [
+        "alimmune list"
+      ],
+      "category": "Settings"
+    },
+    {
+      "name": "filterimmune",
+      "description": "View all filter immunity commands",
+      "usage": "filterimmune",
+      "aliases": [
+        "immune"
+      ],
+      "category": "Settings"
+    }
+  ],
+  "categories": [
+    {
+      "id": "moderation",
+      "name": "Moderation",
+      "count": 18
+    },
+    {
+      "id": "antinuke",
+      "name": "Anti-Nuke",
+      "count": 9
+    },
+    {
+      "id": "antibot",
+      "name": "Anti-Bot",
+      "count": 7
+    },
+    {
+      "id": "automod",
+      "name": "Auto-Mod",
+      "count": 11
+    },
+    {
+      "id": "welcome",
+      "name": "Welcome",
+      "count": 6
+    },
+    {
+      "id": "goodbye",
+      "name": "Goodbye & Join DM",
+      "count": 11
+    },
+    {
+      "id": "boost",
+      "name": "Boost",
+      "count": 6
+    },
+    {
+      "id": "ticket",
+      "name": "Tickets",
+      "count": 13
+    },
+    {
+      "id": "giveaway",
+      "name": "Giveaways",
+      "count": 8
+    },
+    {
+      "id": "fun",
+      "name": "Fun",
+      "count": 48
+    },
+    {
+      "id": "emojisticker",
+      "name": "Emoji & Sticky",
+      "count": 12
+    },
+    {
+      "id": "autoresponder",
+      "name": "Auto Respond & React",
+      "count": 14
+    },
+    {
+      "id": "logging",
+      "name": "Logging",
+      "count": 6
+    },
+    {
+      "id": "voice",
+      "name": "Voice",
+      "count": 8
+    },
+    {
+      "id": "tempvoice",
+      "name": "Temp Voice",
+      "count": 6
+    },
+    {
+      "id": "media",
+      "name": "Media Channels",
+      "count": 7
+    },
+    {
+      "id": "afk",
+      "name": "AFK",
+      "count": 11
+    },
+    {
+      "id": "birthday",
+      "name": "Birthday",
+      "count": 9
+    },
+    {
+      "id": "wall",
+      "name": "Wall System",
+      "count": 8
+    },
+    {
+      "id": "suggestions",
+      "name": "Suggestions",
+      "count": 5
+    },
+    {
+      "id": "roles",
+      "name": "Roles",
+      "count": 18
+    },
+    {
+      "id": "general",
+      "name": "General",
+      "count": 30
+    },
+    {
+      "id": "settings",
+      "name": "Settings",
+      "count": 50
+    }
+  ]
+}

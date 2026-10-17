@@ -334,7 +334,7 @@ function renderEventGroups() {
 }
 
 function renderSecuritySettings() {
-  for (const system of ["antinuke", "automod"]) {
+  for (const system of Object.keys(state.config.securitySchema || {antinuke: [], automod: []})) {
     const target = q(`[data-security-settings="${system}"]`);
     if (!target) continue;
     const features = state.config.securitySchema?.[system];
@@ -356,7 +356,7 @@ function renderSecuritySettings() {
           const controls = (feature.fields || []).map(field => {
             const value = getPath(state.config, field.path, field.value ?? field.default);
             if (field.type === "select") {
-              return `<label>${escapeHtml(field.label)}<select data-bind="${escapeHtml(field.path)}">${(field.options || []).map(option => `<option value="${escapeHtml(option)}" ${value === option ? "selected" : ""}>${escapeHtml(option.toUpperCase())}</option>`).join("")}</select></label>`;
+              return `<label>${escapeHtml(field.label)}<select data-bind="${escapeHtml(field.path)}">${(field.options || []).map(option => `<option value="${escapeHtml(option)}" ${value === option ? "selected" : ""}>${escapeHtml(({ban:"Ban",kick:"Kick",strip:"Strip Roles",warn:"Warn",timeout:"Timeout"})[option] || option.toUpperCase())}</option>`).join("")}</select></label>`;
             }
             if (field.type === "list") {
               return `<label class="security-list-field">${escapeHtml(field.label)}<textarea rows="2" data-list-bind="${escapeHtml(field.path)}">${escapeHtml(Array.isArray(value) ? value.join("\n") : "")}</textarea></label>`;
@@ -925,7 +925,7 @@ function renderCommands(query = "", target = q("[data-command-grid]")) {
       ...(Array.isArray(command.aliases) ? command.aliases : [])
     ].join(" ").toLowerCase();
     return !term || haystack.includes(term);
-  }).slice(0, 80);
+  });
   target.innerHTML = commands.length
     ? commands.map(commandCard).join("")
     : `<article class="command-card"><h3>No commands found</h3><p>Try another search or refresh the command list.</p></article>`;

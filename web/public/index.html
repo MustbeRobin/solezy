@@ -3,13 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#0a0404">
+  <meta name="theme-color" content="#090909">
   <meta name="description" content="Soezy protects Discord communities with server security and automation.">
   <title>Soezy | Discord Security</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/home.css?v=20261017b">
+  <link rel="stylesheet" href="/assets/home.css?v=20261017-rotate5">
+  <link rel="stylesheet" href="/assets/motion.css?v=1">
 </head>
 <body class="home-page">
   <header class="home-nav" data-nav>
@@ -19,12 +20,13 @@
           <span class="brand-glow" aria-hidden="true"></span>
           <span class="brand-disc"><img data-bot-avatar alt="" hidden><b data-bot-fallback>S</b></span>
         </span>
-        <strong class="brand-name" data-bot-name>Soezy</strong>
+        <span class="brand-copy"><strong class="brand-name" data-bot-name>Soezy</strong><span class="brand-tier">Premium</span></span>
       </a>
 
       <nav class="home-nav-links" aria-label="Main navigation">
         <a class="active" href="/">Home</a>
         <a href="/dashboard">Dashboard</a>
+        <a class="nav-premium-link" href="/premium">Premium</a>
         <div class="menu" data-dropdown>
           <button class="menu-trigger" type="button" data-menu-toggle aria-expanded="false" aria-haspopup="true">
             Extra
@@ -37,10 +39,7 @@
           </div>
         </div>
         <a href="/docs">Support</a>
-        <a class="premium-pill" href="/premium">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12l4 6-10 12L2 9z"/><path d="M2 9h20M12 21 8 9l4-6 4 6z"/></svg>
-          Premium
-        </a>
+
       </nav>
 
       <div class="home-nav-actions">
@@ -94,7 +93,7 @@
         <p class="eyebrow rise" style="--d:0ms"><span class="pulse-dot" data-status-dot></span><span data-status-label>Checking live status</span></p>
         <h1 id="hero-title">
           <span class="rise line" style="--d:80ms">Security for your server.</span>
-          <span class="rise line shimmer-text" style="--d:220ms">Built with precision.</span>
+          <span class="rise line shimmer-text rotating-headline" data-rotating-headline style="--d:220ms">Built with precision.</span>
         </h1>
         <p class="hero-description rise" style="--d:380ms"><span data-bot-name>Soezy</span> keeps your Discord community safer with Anti-Nuke, AutoMod, verification, and moderation tools managed from one place.</p>
         <div class="hero-actions rise" style="--d:520ms">
@@ -116,31 +115,31 @@
           <span class="status-pill" data-status-pill><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg><span data-status-pill-label>Checking</span></span>
         </div>
         <div class="live-grid">
-          <article class="metric-card" data-reveal style="--c:#ef4444;--i:0">
+          <article class="metric-card" data-reveal style="--c:#cccccc;--i:0">
             <span class="metric-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
             <strong data-stat="users">--</strong><span class="metric-label">Global users</span>
           </article>
-          <article class="metric-card is-highlight" data-reveal style="--c:#ef4444;--i:1">
+          <article class="metric-card is-highlight" data-reveal style="--c:#cccccc;--i:1">
             <span class="metric-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="3" width="20" height="8" rx="2"/><rect x="2" y="13" width="20" height="8" rx="2"/><path d="M6 7h.01M6 17h.01"/></svg></span>
             <strong data-stat="servers">--</strong><span class="metric-label">Active servers</span>
           </article>
-          <article class="metric-card" data-reveal style="--c:#f59e0b;--i:2">
+          <article class="metric-card" data-reveal style="--c:#cccccc;--i:2">
             <span class="metric-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m4 17 6-6-6-6M12 19h8"/></svg></span>
             <strong data-stat="commands">--</strong><span class="metric-label">Available commands</span>
           </article>
-          <article class="metric-card" data-reveal style="--c:#fb923c;--i:3">
+          <article class="metric-card" data-reveal style="--c:#cccccc;--i:3">
             <span class="metric-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.55a11 11 0 0 1 14.08 0M1.42 9a16 16 0 0 1 21.16 0M8.53 16.11a6 6 0 0 1 6.95 0M12 20h.01"/></svg></span>
             <strong data-stat="latency">--</strong><span class="metric-label">API latency</span>
           </article>
-          <article class="metric-card" data-reveal style="--c:#2dd4bf;--i:4">
+          <article class="metric-card" data-reveal style="--c:#cccccc;--i:4">
             <span class="metric-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span>
             <strong data-stat="uptime">--</strong><span class="metric-label">System uptime</span>
           </article>
-          <article class="metric-card" data-reveal style="--c:#38bdf8;--i:5">
+          <article class="metric-card" data-reveal style="--c:#cccccc;--i:5">
             <span class="metric-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h16M4 15h16M10 3 8 21M16 3l-2 18"/></svg></span>
             <strong data-stat="shards">--</strong><span class="metric-label">Total shards</span>
           </article>
-          <article class="metric-card" data-reveal style="--c:#4ade80;--i:6">
+          <article class="metric-card" data-reveal style="--c:#cccccc;--i:6">
             <span class="metric-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 10 5-10 5L2 7z"/><path d="m2 17 10 5 10-5M2 12l10 5 10-5"/></svg></span>
             <strong data-stat="clusters">--</strong><span class="metric-label">Total clusters</span>
           </article>
@@ -149,6 +148,9 @@
     </section>
   </main>
 
-  <script src="/assets/home.js?v=20261017b" defer></script>
+  <script src="/assets/home-i18n.js?v=1" defer></script>
+  <script src="/assets/home.js?v=20261017-rotate5" defer></script>
+  <script src="/assets/motion.js?v=1" defer></script>
+  <script src="/assets/headline.js?v=1" defer></script>
 </body>
 </html>

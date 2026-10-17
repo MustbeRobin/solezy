@@ -8,7 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/dashboard-ui.css?v=20261017b">
+  <link rel="stylesheet" href="/assets/dashboard-ui.css?guards=2&v=20261017b">
+  <link rel="stylesheet" href="/assets/motion.css?v=1">
 </head>
 <body class="dashboard-page dashboard-booting">
   <div class="ambient" aria-hidden="true"><span class="amb a"></span><span class="amb b"></span></div>
@@ -235,7 +236,9 @@
             <article class="control-card"><h3>Ignored Roles</h3><p>One role ID per line. Saved directly to the bot security whitelist.</p><textarea rows="8" data-list-bind="security.whitelistRoles" placeholder="Role IDs"></textarea></article>
             <article class="control-card"><h3>Ignored Users</h3><p>One user ID per line. Saved directly to the bot security whitelist.</p><textarea rows="8" data-list-bind="security.whitelistUsers" placeholder="User IDs"></textarea></article>
           </div>
-        </section>
+        
+<div class="demo-guard-note" style="margin:24px 0 12px;color:#aaa;font-size:13px">Demo abuse-protection settings — thresholds count repeated actions, not normal use. Not enforced by the live bot.</div><div class="security-feature-groups" data-security-settings="whitelist"></div>
+</section>
 
         <section class="panel" data-panel-view="logging">
           <div class="panel-head"><div><h2>Event Logging</h2><p>Per-event channel assignments and automatic logging setup.</p></div><button class="button primary small" data-logging-setup type="button">Run Setup</button></div>
@@ -252,7 +255,9 @@
             <article class="control-card"><label class="toggle-row"><span><b>Enable Welcome</b><small>Send a join message</small></span><input type="checkbox" data-bind="welcome.enabled"></label><label>Channel ID<input data-bind="welcome.channel" placeholder="Channel ID"></label><label>Title<input data-bind="welcome.title" placeholder="Welcome to {server}"></label><label>Message<textarea data-bind="welcome.message" rows="5"></textarea></label><label>Background Image URL<input data-bind="welcome.image" placeholder="https://..."></label><label>Auto Delete Seconds<input type="number" min="0" data-bind="welcome.autoDelete"></label></article>
             <article class="preview-card"><span>Discord Preview</span><h3 data-welcome-title>Welcome to Soezy</h3><p data-welcome-message>Welcome {user} to {server}!</p><small data-welcome-footer>Variables: {user}, {server}, {membercount}</small></article>
           </div>
-        </section>
+        
+<div class="demo-guard-note" style="margin:24px 0 12px;color:#aaa;font-size:13px">Demo abuse-protection settings — thresholds count repeated actions, not normal use. Not enforced by the live bot.</div><div class="security-feature-groups" data-security-settings="welcome"></div>
+</section>
 
         <section class="panel" data-panel-view="tickets">
           <div class="panel-head"><div><h2>Tickets</h2><p>Support panels, staff routing, caps, and category workflow.</p></div><span class="server-badge">Support</span></div>
@@ -260,7 +265,9 @@
             <article class="control-card"><label class="toggle-row"><span><b>Enable Tickets</b><small>Allow users to open support tickets</small></span><input type="checkbox" data-bind="ticket.enabled"></label><label>Panel Channel<input data-bind="ticket.channel" placeholder="Channel ID"></label><label>Category<input data-bind="ticket.category" placeholder="Category ID"></label></article>
             <article class="control-card"><h3>Limits</h3><label>Support Role<input data-bind="ticket.supportRole" placeholder="Role ID"></label><label>Max Tickets<input type="range" min="1" max="20" data-bind="ticket.maxTickets"><output data-output-for="ticket.maxTickets"></output></label></article>
           </div>
-        </section>
+        
+<div class="demo-guard-note" style="margin:24px 0 12px;color:#aaa;font-size:13px">Demo abuse-protection settings — thresholds count repeated actions, not normal use. Not enforced by the live bot.</div><div class="security-feature-groups" data-security-settings="tickets"></div>
+</section>
 
         <section class="panel" data-panel-view="music">
           <div class="panel-head"><div><h2>Music Studio</h2><p>Runtime settings for music availability, default volume, and 24/7 voice mode.</p></div><span class="server-badge">Live Config</span></div>
@@ -277,22 +284,30 @@
             </div>
             <div class="queue-list"><label class="toggle-row"><span><b>Enable Music</b><small>Music commands available</small></span><input type="checkbox" data-bind="music.enabled"></label><label class="toggle-row"><span><b>24/7 Mode</b><small>Keep Soezy in voice when enabled</small></span><input type="checkbox" data-bind="music.twentyFourSeven"></label><span>Auto-leave follows bot runtime settings when 24/7 mode is off.</span></div>
           </article>
-        </section>
+        
+<div class="demo-guard-note" style="margin:24px 0 12px;color:#aaa;font-size:13px">Demo abuse-protection settings — thresholds count repeated actions, not normal use. Not enforced by the live bot.</div><div class="security-feature-groups" data-security-settings="music"></div>
+</section>
 
         <section class="panel" data-panel-view="customRoles">
           <div class="panel-head"><div><h2>Custom Role</h2><p>Self-managed role limits and identity previews.</p></div></div>
           <div class="dash-grid two"><article class="control-card"><label class="toggle-row"><span><b>Enable Custom Roles</b><small>Let users manage identity roles</small></span><input type="checkbox" data-bind="customRoles.enabled"></label><label>Max Roles<input type="range" min="1" max="10" data-bind="customRoles.maxRoles"><output data-output-for="customRoles.maxRoles"></output></label></article><article class="role-preview"><span class="role-chip">Soezy Elite</span><span class="role-chip blue">Cyber Staff</span><span class="role-chip red">Security Core</span></article></div>
-        </section>
+        
+<div class="demo-guard-note" style="margin:24px 0 12px;color:#aaa;font-size:13px">Demo abuse-protection settings — thresholds count repeated actions, not normal use. Not enforced by the live bot.</div><div class="security-feature-groups" data-security-settings="customRoles"></div>
+</section>
 
         <section class="panel" data-panel-view="verification">
           <div class="panel-head"><div><h2>Verification</h2><p>Verification panels, role assignment, and gate copy.</p></div></div>
           <article class="control-card"><label class="toggle-row"><span><b>Enable Verification</b><small>Gate new members behind a panel</small></span><input type="checkbox" data-bind="verify.enabled"></label><label>Channel ID<input data-bind="verify.channel"></label><label>Verified Role ID<input data-bind="verify.role"></label><label>Panel Title<input data-bind="verify.title"></label><label>Panel Message<textarea rows="4" data-bind="verify.message"></textarea></label></article>
-        </section>
+        
+<div class="demo-guard-note" style="margin:24px 0 12px;color:#aaa;font-size:13px">Demo abuse-protection settings — thresholds count repeated actions, not normal use. Not enforced by the live bot.</div><div class="security-feature-groups" data-security-settings="verification"></div>
+</section>
 
         <section class="panel" data-panel-view="security">
           <div class="panel-head"><div><h2>Security Score</h2><p>Live protection score based on module health and setup completeness.</p></div></div>
           <article class="security-panel"><div class="big-score"><span data-security-score>--</span><small>/100</small></div><div class="module-strip" data-security-modules></div></article>
-        </section>
+        
+<div class="demo-guard-note" style="margin:24px 0 12px;color:#aaa;font-size:13px">Demo abuse-protection settings — thresholds count repeated actions, not normal use. Not enforced by the live bot.</div><div class="security-feature-groups" data-security-settings="security"></div>
+</section>
 
         <section class="panel" data-panel-view="commands">
           <div class="panel-head"><div><h2>Command Center</h2><p>Search commands, categories, aliases, and usage examples.</p></div><button class="button primary small" data-command-search type="button">Open Search</button></div>
@@ -360,7 +375,8 @@
   <script src="/assets/config.js?v=20260529a"></script>
   <script src="/socket.io/socket.io.js"></script>
   <script src="/assets/app.js?v=20261015c"></script>
-  <script src="/assets/dashboard.js?v=20260602b"></script>
+  <script src="/assets/dashboard.js?guards=2&v=20260602b"></script>
   <script src="/assets/dashboard-fx.js?v=20261017b"></script>
+  <script src="/assets/motion.js?v=1" defer></script>
 </body>
 </html>

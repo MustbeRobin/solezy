@@ -1,0 +1,30 @@
+/* Shared pointer lighting. Fixed, non-interactive, and layout-independent. */
+.soezy-pointer-light {
+  position: fixed; inset: 0; z-index: 100; pointer-events: none;
+  opacity: 0; transition: opacity .6s ease;
+  background: radial-gradient(420px circle at var(--pointer-x,50%) var(--pointer-y,40%),rgba(255,255,255,.045),transparent 72%);
+}
+.soezy-pointer-light.is-active { opacity: 1; }
+.auth-page { background: radial-gradient(ellipse at 50% 25%,#202020 0,transparent 55%),#090909 !important; font-family: Inter,"Segoe UI",system-ui,sans-serif; }
+.auth-page .compact-auth { width: 100%; min-height: calc(100svh - 100px); display: grid; place-items: center; padding: 60px 24px; perspective: 1200px; }
+.auth-page .login-card {
+  width: min(100%,500px); max-width: 500px; padding: 52px 40px 42px;
+  border: 1px solid #343434; border-radius: 24px; text-align: center;
+  background: radial-gradient(ellipse at 10% 0,#27272788,transparent 65%),#111;
+  box-shadow: 0 28px 90px #0006,inset 0 1px 0 #ffffff08;
+  transform: rotateX(var(--tilt-x,0deg)) rotateY(var(--tilt-y,0deg));
+  transition: transform .25s ease-out, border-color .3s;
+}
+.auth-page .login-card:hover { border-color: #555; }
+.auth-page .login-card::before { display: none; }
+.auth-page .login-avatar-wrap { margin: 0 auto 30px; }
+.auth-page .login-avatar { background: linear-gradient(145deg,#333,#181818); color: #fafafa; border-color: #5a5a5a; box-shadow: 0 0 40px #ffffff08; }
+.auth-page .login-avatar-wrap::before { border-color: #ffffff18; border-top-color: #d4d4d4; }
+.auth-page .login-card h1 { color: #f5f5f5; font-size: clamp(28px,5vw,38px); line-height: 1.16; letter-spacing: -.045em; margin: 0 0 18px; }
+.auth-page .login-card p { color: #a6a6a6; font-size: 16px; line-height: 1.75; margin: 0 auto 28px; max-width: 380px; }
+.auth-page .login-card .button.discord { margin: 0; min-height: 54px; display: flex; justify-content: center; align-items: center; border: 1px solid #fff; border-radius: 12px; background: linear-gradient(#fff,#dedede); color: #151515; font-size: 15px; font-weight: 650; box-shadow: 0 8px 30px #ffffff0c; }
+.auth-page .login-card .button.discord:hover { background: #fff; transform: translateY(-2px); box-shadow: 0 12px 32px #ffffff18; }
+.auth-page .login-card .auth-note { display: block; margin-top: 24px; color: #898989; font-size: 12px; font-weight: 400; line-height: 1.8; }
+.auth-page .login-card .auth-note a { color: #bdbdbd; text-underline-offset: 3px; }
+@media (max-width:540px) { .auth-page .compact-auth { padding: 32px 18px; } .auth-page .login-card { padding: 38px 24px 32px; border-radius: 20px; } }
+@media (prefers-reduced-motion:reduce), (pointer:coarse) { .soezy-pointer-light { display: none; } .auth-page .login-card { transform: none !important; } }
